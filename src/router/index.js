@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
+import drogiGruntowe from "../views/drogiGruntowe.vue";
+import kontakt from "../views/kontakt";
 Vue.use(VueRouter)
 
 const routes = [
@@ -10,6 +11,31 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  {
+    path: '/drogi-gruntowe',
+    name: 'drogi-gruntowe',
+    component: drogiGruntowe
+  },
+  {
+    path: '/kontakt',
+    name: 'kontakt',
+    component: kontakt
+  },
+  // {
+  //   path: '/wykopy',
+  //   name: 'wykopy',
+  //   component: Home
+  // },
+  // {
+  //   path: '/transport',
+  //   name: 'transport',
+  //   component: Home
+  // },
+  // {
+  //   path: '/sprzet',
+  //   name: 'sprzet',
+  //   component: Home
+  // },
   {
     path: '/about',
     name: 'About',
@@ -25,5 +51,6 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
 
 export default router

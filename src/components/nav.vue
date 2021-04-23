@@ -1,9 +1,11 @@
 <template>
   <v-card>
-    <v-toolbar extended color="grey darken-4">
+    <v-toolbar extended color="#0A0A0A">
+      <router-link :to="{name:'Home'}">
       <v-flex class="pt-14">
         <v-img  src="../assets/LOGO DAR BUD bez tla.png" alt="dar-bud" height="150" width="355.28340081" class="pt-1"/>
       </v-flex>
+      </router-link>
         <v-spacer></v-spacer>
       <v-row
         align="center"
@@ -15,13 +17,16 @@
           color="grey lighten-3"
         >
           referencje
-        </v-btn><v-btn
+        </v-btn>
+        <v-btn
+          href="#nas"
           text
           color="grey lighten-3"
         >
           o nas
         </v-btn>
         <v-btn
+          href="#inwestycje"
           text
           color="grey lighten-3"
         >
@@ -30,10 +35,12 @@
         <v-btn
           text
           color="grey lighten-3"
+          href="#usluga"
         >
           usługi
         </v-btn>
 
+        <router-link :to="{name:'kontakt'}" class="text-decoration-none">
         <v-btn
             color="orange lighten-1"
             class="ma-2 white--text"
@@ -47,6 +54,7 @@
             mdi-phone-in-talk
           </v-icon>
         </v-btn>
+        </router-link>
       </v-row>
     </v-toolbar>
   </v-card>
