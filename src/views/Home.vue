@@ -109,7 +109,7 @@
         max-width="344"
       >
         <v-img
-            src="../assets/spych.png"
+            src="../assets/sprzet/spych.png"
             height="200px"
         ></v-img>
 
@@ -142,26 +142,29 @@
         max-width="344"
       >
         <v-img
-            src="../assets/koparka.png"
+            src="../assets/sprzet/koparka.png"
             height="200px"
         ></v-img>
 
         <v-card-title>
           Wykopy
         </v-card-title>
-
         <v-card-subtitle>
           Posiadamy precyzyjny sprzęt do najbardziej wymagających wykopów.
         </v-card-subtitle>
 
         <v-card-actions>
             <v-spacer></v-spacer>
-          <v-btn
-              color="orange lighten-1"
-              outlined
-          >
-           Zobacz więcej
-          </v-btn>
+
+
+          <router-link :to="{name:'wykopy'}" class="text-decoration-none">
+            <v-btn
+                color="orange lighten-1"
+                outlined
+            >
+             Zobacz więcej
+            </v-btn>
+          </router-link>
         </v-card-actions>
 
       </v-card>
@@ -173,12 +176,12 @@
 
       >
         <v-img
-            src="../assets/ciężarówka.png"
+            src="../assets/sprzet/ciężarówka.png"
             height="200px"
         ></v-img>
 
         <v-card-title>
-          transport
+          Rozbiurki
         </v-card-title>
 
         <v-card-subtitle>
@@ -188,12 +191,14 @@
           <v-spacer></v-spacer>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn
-                color="orange lighten-1"
-                outlined
-            >
-              Zobacz więcej
-            </v-btn>
+            <router-link :to="{name:'rozbiorka'}" class="text-decoration-none">
+              <v-btn
+                  color="orange lighten-1"
+                  outlined
+              >
+                Zobacz więcej
+              </v-btn>
+            </router-link>
           </v-card-actions>
       </v-card>
         </v-col>
@@ -204,7 +209,7 @@
 
           >
             <v-img
-                src="../assets/małySpych.png"
+                src="../assets/sprzet/małySpych.png"
                 height="200px"
             ></v-img>
 
@@ -218,16 +223,23 @@
 
             <v-card-actions>
               <v-spacer></v-spacer>
+
+              <router-link :to="{name:'urzadzenia'}" class="text-decoration-none">
               <v-btn
                   color="orange lighten-1"
                   outlined
               >
                 Zobacz więcej
               </v-btn>
+              </router-link>
             </v-card-actions>
           </v-card>
         </v-col>
       </v-row>
+
+
+
+
 
       <v-row style="padding-top: 5%">
         <v-col>
@@ -237,14 +249,13 @@
               max-width="344"
           >
             <v-img
-                src="../assets/spych.png"
+                src="../assets/sprzet/smallciezarowka.png"
                 height="200px"
             ></v-img>
 
             <v-card-title>
               drogi gruntowe
             </v-card-title>
-
             <v-card-subtitle>
               posiadamy najlepszy sprzęt do przygotowania oraz utrzymywania dróg gruntowych
             </v-card-subtitle>
@@ -253,7 +264,7 @@
 
             <v-card-actions>
               <v-spacer></v-spacer>
-              <router-link :to="{name:'drogi-gruntowe'}" class="text-decoration-none">
+              <router-link :to="{name:'kruszce'}" class="text-decoration-none">
                 <v-btn
                     color="orange lighten-1"
                     outlined
@@ -271,7 +282,7 @@
               max-width="344"
           >
             <v-img
-                src="../assets/koparka.png"
+                src="../assets/sprzet/koparka.png"
                 height="200px"
             ></v-img>
 
@@ -302,7 +313,7 @@
 
           >
             <v-img
-                src="../assets/ciężarówka.png"
+                src="../assets/sprzet/ciężarówka.png"
                 height="200px"
             ></v-img>
 
@@ -333,7 +344,7 @@
 
           >
             <v-img
-                src="../assets/małySpych.png"
+                src="../assets/sprzet/małySpych.png"
                 height="200px"
             ></v-img>
 

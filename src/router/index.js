@@ -3,6 +3,10 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import drogiGruntowe from "../views/drogiGruntowe.vue";
 import kontakt from "../views/kontakt";
+import wykopy from "../views/wykopy"
+import rozbiorka from "../views/rozbiorki.vue"
+import urzadzenia from "../views/urzadzenia.vue"
+import kruszce from "../views/kruszce.vue"
 Vue.use(VueRouter)
 
 const routes = [
@@ -21,21 +25,27 @@ const routes = [
     name: 'kontakt',
     component: kontakt
   },
-  // {
-  //   path: '/wykopy',
-  //   name: 'wykopy',
-  //   component: Home
-  // },
-  // {
-  //   path: '/transport',
-  //   name: 'transport',
-  //   component: Home
-  // },
-  // {
-  //   path: '/sprzet',
-  //   name: 'sprzet',
-  //   component: Home
-  // },
+
+  {
+    path: '/wykopy',
+    name: 'wykopy',
+    component: wykopy
+  },
+  {
+    path: '/rozbiorki',
+    name: 'rozbiorka',
+    component: rozbiorka
+  },
+  {
+    path: '/kruszce',
+    name: 'kruszce',
+    component: kruszce
+  },
+   {
+    path: '/sprzet',
+    name: 'urzadzenia',
+    component: urzadzenia
+  },
   {
     path: '/about',
     name: 'About',

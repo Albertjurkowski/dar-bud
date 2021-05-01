@@ -19,14 +19,14 @@
           referencje
         </v-btn>
         <v-btn
-          href="#nas"
+          href="/#nas"
           text
           color="grey lighten-3"
         >
           o nas
         </v-btn>
         <v-btn
-          href="#inwestycje"
+          href="/#inwestycje"
           text
           color="grey lighten-3"
         >
@@ -35,7 +35,7 @@
         <v-btn
           text
           color="grey lighten-3"
-          href="#usluga"
+          href="/#usluga"
         >
           usługi
         </v-btn>
