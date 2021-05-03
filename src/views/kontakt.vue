@@ -38,7 +38,7 @@
           <v-icon
 
               x-large
-              color="orange lighten-1"
+              :color=orange
           >
             mdi-phone-in-talk
           </v-icon>
@@ -47,7 +47,7 @@
         <v-card-text class="headline white--text">
           <v-icon
               large
-              color="orange lighten-1"
+              :color=orange
           >
             mdi-email
           </v-icon>
@@ -73,14 +73,15 @@ export default {
   name: "kontakt",
   data() {
     return {
-    map:""
+          orange: "orange lighten-1",
+          map: ""
+        }
+      },
+      components: {
+        Nav,
+        Footer
+      },
     }
-  },
-  components:{
-    Nav,
-    Footer
-  },
-}
 </script>
 
 <style scoped>

@@ -42,7 +42,7 @@
 
         <router-link :to="{name:'kontakt'}" class="text-decoration-none">
         <v-btn
-            color="orange lighten-1"
+            :color=orange
             class="ma-2 white--text"
             outlined
         >
@@ -64,8 +64,13 @@
   export default {
     name: 'nav',
 
-    data: () => ({
-    }),
+    data() {
+      return {
+        show: false,
+        orange: "orange lighten-1",
+
+      };
+    }
   }
 </script>
 <style>

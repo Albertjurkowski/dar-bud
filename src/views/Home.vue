@@ -11,10 +11,13 @@
 
       >
 
-        <div style="padding-top: 16%">
-           <h1 style="font-size: 90px">
-             <strong class=" orange--text text--lighten-1">DAR-BUD</strong>
-           </h1>
+        <div
+          style="padding-top: 16%"
+          align="center"
+        >
+          <h1 style="font-size: 90px">
+            <strong class=" orange--text text--lighten-1">DAR-BUD</strong>
+          </h1>
           <v-card-text class="headline white--text">
             "Jakość jest najważniejsza"
           </v-card-text>
@@ -23,8 +26,7 @@
         <div class="pt-11">
 
         <v-btn
-
-            color="orange lighten-1"
+            :color=orange
             class="ma-2 white--text "
             outlined
         >
@@ -62,7 +64,7 @@
       </v-carousel>
     <v-card
         class=" text-h1-xl justify-center px-16 text-center"
-        color="orange lighten-1"
+        :color=orange
         height="1000"
         width="100%"
         id="nas"
@@ -127,7 +129,7 @@
           <v-spacer></v-spacer>
           <router-link :to="{name:'drogi-gruntowe'}" class="text-decoration-none">
           <v-btn
-              color="orange lighten-1"
+              :color=orange
               outlined
           >
             Zobacz więcej
@@ -159,7 +161,7 @@
 
           <router-link :to="{name:'wykopy'}" class="text-decoration-none">
             <v-btn
-                color="orange lighten-1"
+                :color=orange
                 outlined
             >
              Zobacz więcej
@@ -193,7 +195,7 @@
             <v-spacer></v-spacer>
             <router-link :to="{name:'rozbiorka'}" class="text-decoration-none">
               <v-btn
-                  color="orange lighten-1"
+                  :color=orange
                   outlined
               >
                 Zobacz więcej
@@ -226,7 +228,7 @@
 
               <router-link :to="{name:'urzadzenia'}" class="text-decoration-none">
               <v-btn
-                  color="orange lighten-1"
+                  :color=orange
                   outlined
               >
                 Zobacz więcej
@@ -266,7 +268,7 @@
               <v-spacer></v-spacer>
               <router-link :to="{name:'kruszce'}" class="text-decoration-none">
                 <v-btn
-                    color="orange lighten-1"
+                    :color=orange
                     outlined
                 >
                  Zobacz więcej
@@ -297,7 +299,7 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn
-                  color="orange lighten-1"
+                  :color=orange
                   outlined
               >
                 Zobacz więcej
@@ -329,7 +331,7 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn
-                  color="orange lighten-1"
+                  :color=orange
                   outlined
               >
                 Zobacz więcej
@@ -359,7 +361,7 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn
-                  color="orange lighten-1"
+                  :color=orange
                   outlined
               >
                 Zobacz więcej
@@ -390,6 +392,8 @@ export default {
   data() {
     return {
       show: false,
+
+      orange: "orange lighten-1",
       items: [
         {
           src: require("../assets/drogastreet.jpg"),

@@ -4,7 +4,7 @@
       padless
   >
     <v-card
-        color="orange lighten-1"
+        :color=orange
         class="black--text text-center"
     >
       <v-card-text>
@@ -36,14 +36,18 @@
 <script>
 export default {
   name: "footer",
-  data:() =>({
-    icons: [
-      'mdi-facebook',
-      'mdi-twitter',
-      'mdi-linkedin',
-      'mdi-instagram',
-    ],
-  })
+    data() {
+      return {
+        show: false,
+        orange: "orange lighten-1",
+        icons: [
+          'mdi-facebook',
+          'mdi-twitter',
+          'mdi-linkedin',
+          'mdi-instagram'
+            ]
+      };
+    }
 }
 </script>
 

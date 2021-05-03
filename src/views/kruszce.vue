@@ -22,6 +22,7 @@ export default {
   data() {
     return {
       dialog: false,
+      orange: "orange lighten-1",
       items: [
         {
           src: require("../assets/kruszce/P1010072.jpg"),

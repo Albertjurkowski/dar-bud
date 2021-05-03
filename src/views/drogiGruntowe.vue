@@ -27,7 +27,7 @@
             <v-spacer></v-spacer>
             <router-link to="sprzet" class="text-decoration-none">
               <v-btn
-                  color="orange lighten-1"
+                  :color=orange
                   outlined
 
               >
@@ -70,28 +70,31 @@ export default {
   components: {
     Footer,
     Nav
-},
+  },
   data() {
     return {
       show: false,
-      items: [
 
-        {
-          src: require("../assets/drogi/b.jpg"),
-        },
-        {
-          src: require("../assets/drogi/a.jpg"),
-        },
-        {
-          src: require("../assets/drogi/c.jpg"),
-        },
-        {
-          src: require("../assets/drogi/d.jpg"),
-        }
-      ]
-    };
-  }
-};
+
+          orange: "orange lighten-1",
+          items: [
+
+            {
+              src: require("../assets/drogi/b.jpg"),
+            },
+            {
+              src: require("../assets/drogi/a.jpg"),
+            },
+            {
+              src: require("../assets/drogi/c.jpg"),
+            },
+            {
+              src: require("../assets/drogi/d.jpg"),
+            }
+          ]
+        };
+      }
+    }
 </script>
 
 <style scoped>

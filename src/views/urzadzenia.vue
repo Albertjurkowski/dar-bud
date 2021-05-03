@@ -89,9 +89,9 @@ export default {
         },
         {
           src: require("../assets/sprzet/smallciezarowka.png"),
-          title:"man",
+          title:"samochód dostawczy",
           subtitle: " ge",
-          describe: "samochód dostawczy, dostarcza wszystkie towary o wadze to 4 ton, ",
+          describe: "dostarcza wszystkie towary o wadze to 4 ton, ",
         },
         {
           src: require("../assets/sprzet/ciężarówka.png"),
