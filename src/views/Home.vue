@@ -12,32 +12,62 @@
       >
 
         <div
-          style="padding-top: 16%"
+          style="padding-top: 14%"
           align="center"
         >
-          <h1 style="font-size: 90px">
-            <strong class=" orange--text text--lighten-1">DAR-BUD</strong>
-          </h1>
-          <v-card-text class="headline white--text">
-            "Jakość jest najważniejsza"
-          </v-card-text>
+
+            <div class="text-center text--white">
+              <v-progress-circular
+                :rotate="-90"
+                :size="300"
+                :width="15"
+                :value="value"
+                :color=orange
+                class="ml-16"
+              >
+                <v-col>
+              <h1 class="text-center">{{ value }}%</h1>
+                  <div class="pt-5">
+                <v-row>doświadczonych pracowników</v-row>
+                  </div>
+                </v-col>
+              </v-progress-circular>
+
+              <v-progress-circular
+                  :rotate="-90"
+                  :size="300"
+                  :width="15"
+                  :value="year"
+                  :color=orange
+                  class="ml-16"
+              >
+                <v-col>
+                  <h1 class="text-center">{{ year }}%</h1>
+                  <div class="pt-5 mx-10" >
+                    <v-row>najnowszej technologi budownictwa</v-row>
+                  </div>
+                </v-col>
+              </v-progress-circular>
+              <v-progress-circular
+                  :rotate="-90"
+                  :size="300"
+                  :width="15"
+                  :value="project"
+                  :color=orange
+                  class="ml-16"
+              >
+                <v-col>
+                  <h1 class="text-center">{{ lat }} lat</h1>
+                  <div class="pt-5 text-center">
+                    <v-row></v-row><v-row> doświadczenia</v-row>
+                  </div>
+                </v-col>
+              </v-progress-circular>
+
+            </div>
         </div>
         <router-link :to="{name:'kontakt'}" class="text-decoration-none">
         <div class="pt-11">
-
-        <v-btn
-            :color=orange
-            class="ma-2 white--text "
-            outlined
-        >
-          kontakt
-          <v-icon
-              right
-              dark
-          >
-            mdi-phone-in-talk
-          </v-icon>
-        </v-btn>
 
         </div>
         </router-link>
@@ -82,14 +112,10 @@
           W połączeniu z dokładnością praz oraz przykładaniem się do profesjonalnej
           i indywidualnej realizacji staliśmy się solidnym wykonawcą
         </v-card-text>
-        <v-card
-            class="mx-auto"
-          style="padding-top: 5%"
-          height="400"
-          width="800"
-        >
-          Film prezentujący najlepszą technologie firmy
-        </v-card>
+
+          <iframe width="700" height="393" src="https://www.youtube.com/embed/WYtxZQhBaL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
       </div>
 
 
@@ -380,8 +406,6 @@
 
 import Nav from "@/components/nav.vue";
 import Footer from "@/components/footer";
-
-
 export default {
 
   name: 'Home',
@@ -389,11 +413,18 @@ export default {
     Footer,
     Nav
   },
+
   data() {
     return {
       show: false,
-
+      interval: {},
+      value: 0,
+      year: 0,
+      lat: 0,
+      project: 0,
       orange: "orange lighten-1",
+      player: "",
+      done: false,
       items: [
         {
           src: require("../assets/drogastreet.jpg"),
@@ -409,6 +440,42 @@ export default {
         }
       ]
     };
+  },
+  mounted () {
+
+    this.interval = setInterval(() => {
+      if (this.value === 100) {
+        return (this.value = 100)
+      }
+      this.value += 10
+    }, 400)
+
+    this.interval = setInterval(() => {
+      if (this.year === 100) {
+        return (this.year = 100)
+      }
+      this.year += 10
+    }, 400);
+
+    this.interval = setInterval(() => {
+      if (this.project === 100) {
+        return (this.project = 100)
+      }
+      this.project += 10
+    }, 400)
+    this.experience = setInterval(() => {
+      if (this.lat === 15) {
+        return (this.lat = 15)
+      }
+      this.lat += 1
+    }, 300)
+  },
+  methods:{
   }
 }
 </script>
+<style scoped>
+.v-progress-circular {
+  margin: 1rem;
+}
+</style>
