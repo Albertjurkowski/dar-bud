@@ -91,7 +91,7 @@ export default {
           src: require("../assets/sprzet/smallciezarowka.png"),
           title:"samochód dostawczy",
           subtitle: " ge",
-          describe: "dostarcza wszystkie towary o wadze to 4 ton, ",
+          describe: "dostarcza wszystkie towary o wadze to 4 ton, pojemność silnika 2.0l  ",
         },
         {
           src: require("../assets/sprzet/ciężarówka.png"),

@@ -1,21 +1,18 @@
 <template>
   <v-cointeiner>
     <Nav></Nav>
-    <v-parallax class="py-7" height="1000" max-widith="100%" src="../assets/pixcity.jpg">
+    <v-card class="py-16" height="950" max-widith="100%" color="#0A0A0A" >
       <v-card
           class="mx-auto text-center text-h1-xl justify-center"
-          color="#0A0A0A"
+          color="#1E1E1EFF"
           height="800"
           width="1750"
           v-ripple
 
       >
-
         <div
           style="padding-top: 14%"
-          align="center"
         >
-
             <div class="text-center text--white">
               <v-progress-circular
                 :rotate="-90"
@@ -66,13 +63,13 @@
 
             </div>
         </div>
-        <router-link :to="{name:'kontakt'}" class="text-decoration-none">
+        <router-link @click.native="scrollToTop"  :to="{name:'kontakt'}" class="text-decoration-none">
         <div class="pt-11">
 
         </div>
         </router-link>
       </v-card>
-    </v-parallax>
+    </v-card>
 
       <v-carousel
         id="inwestycje"
@@ -104,14 +101,15 @@
         <h1 style="font-size: 90px">
           <strong>O NAS</strong>
         </h1>
-        <v-card-text class="headline pt-16">
+
+        <v-card-subtitle class="text-md-h5" >
           Firma Dar -Bud Dariusz Bednarczyk działa na rynku od 2006.
           Od samego początku stawialiśmy zarówno na sprawdzone rozwiązania, jak i nowe,
           skuteczne rozwiązania technologiczne. Specjalistyczny sprzęt, wykwalifikowana kadra, a
           także doświadczenie w realizacji inwestycji.
           W połączeniu z dokładnością praz oraz przykładaniem się do profesjonalnej
           i indywidualnej realizacji staliśmy się solidnym wykonawcą
-        </v-card-text>
+        </v-card-subtitle>
 
           <iframe width="700" height="393" src="https://www.youtube.com/embed/WYtxZQhBaL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -123,11 +121,10 @@
 <div  id="usluga">
     <v-card
 
-      class="text-center text-h1-xl"
-      style="padding-top: 5%"
+      class="text-center text-h1-xl py-10"
       color="#0A0A0A"
       dark
-      height="1000"
+      height="100%"
       v-ripple
     >
       <v-row>
@@ -153,7 +150,7 @@
 
         <v-card-actions>
           <v-spacer></v-spacer>
-          <router-link :to="{name:'drogi-gruntowe'}" class="text-decoration-none">
+          <router-link @click.native="scrollToTop" :to="{name:'drogi-gruntowe'}" class="text-decoration-none">
           <v-btn
               :color=orange
               outlined
@@ -185,7 +182,7 @@
             <v-spacer></v-spacer>
 
 
-          <router-link :to="{name:'wykopy'}" class="text-decoration-none">
+          <router-link @click.native="scrollToTop" :to="{name:'wykopy'}" class="text-decoration-none">
             <v-btn
                 :color=orange
                 outlined
@@ -219,7 +216,7 @@
           <v-spacer></v-spacer>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <router-link :to="{name:'rozbiorka'}" class="text-decoration-none">
+            <router-link @click.native="scrollToTop" :to="{name:'rozbiorka'}" class="text-decoration-none">
               <v-btn
                   :color=orange
                   outlined
@@ -252,7 +249,7 @@
             <v-card-actions>
               <v-spacer></v-spacer>
 
-              <router-link :to="{name:'urzadzenia'}" class="text-decoration-none">
+              <router-link @click.native="scrollToTop" :to="{name:'urzadzenia'}" class="text-decoration-none">
               <v-btn
                   :color=orange
                   outlined
@@ -292,7 +289,7 @@
 
             <v-card-actions>
               <v-spacer></v-spacer>
-              <router-link :to="{name:'kruszce'}" class="text-decoration-none">
+              <router-link @click.native="scrollToTop" :to="{name:'kruszce'}" class="text-decoration-none">
                 <v-btn
                     :color=orange
                     outlined
@@ -471,6 +468,9 @@ export default {
     }, 300)
   },
   methods:{
+    scrollToTop() {
+      window.scrollTo(0,0);
+    }
   }
 }
 </script>

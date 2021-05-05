@@ -1,7 +1,7 @@
 <template>
   <v-card>
-    <v-toolbar extended color="#0A0A0A">
-      <router-link :to="{name:'Home'}">
+    <v-toolbar extended color="#1E1E1EFF">
+      <router-link @click.native="scrollToTop" :to="{name:'Home'}">
       <v-flex class="pt-14">
         <v-img  src="../assets/LOGO DAR BUD bez tla.png" alt="dar-bud" height="150" width="355.28340081" class="pt-1"/>
       </v-flex>
@@ -70,8 +70,11 @@
         orange: "orange lighten-1",
 
       };
+    },
+    methods: {
+      scrollToTop() {
+        window.scrollTo(0,0);
+      }
     }
   }
 </script>
-<style>
-</style>
