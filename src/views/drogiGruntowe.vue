@@ -10,32 +10,12 @@
           <strong>Utrzymanie dróg i placów</strong>
         </h1>
         <v-card-text class="headline pt-10 white--text" >
-          Posiadamy szeroki wachlarz sprzętu który pomaga nam w profesjonalny sposób wykonywać drogi parkingi oraz prowadzić remonty
+          Bierzące utrzymanie drug grunotwych. Posiadamy szeroki wachlarz sprzętu który pomaga nam w profesjonalny sposób wykonywać drogi parkingi oraz prowadzić remonty.
+
         </v-card-text>
       </div>
 
       <v-row align="center" class="mx-auto justify-center pt-16">
-        <v-card height="562.5" width="750" color="theme--dark">
-          <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
-            <strong> Technologia</strong>
-          </h1>
-
-          <v-card-text class="headline pt-10 white--text" >
-           nasze drogi, parkingi, ścieżki oraz chodniki są wykonywane przy użyciu najnowszych technologi przez wyselekcjonowany sprzęt. Nasi doświadczeni pracownicy są szkoleni przez najlepszych specjalistów.
-          </v-card-text>
-          <v-card-actions style="margin-top: 25%" class="mr-11">
-            <v-spacer></v-spacer>
-            <router-link to="sprzet" class="text-decoration-none">
-              <v-btn
-                  :color=orange
-                  outlined
-
-              >
-                Zobacz więcej
-              </v-btn>
-            </router-link>
-          </v-card-actions>
-        </v-card>
         <v-card height="562.5" width="750">
           <v-carousel
               cycle
@@ -83,13 +63,19 @@ export default {
               src: require("../assets/drogi/b.jpg"),
             },
             {
-              src: require("../assets/drogi/a.jpg"),
+              src: require("../assets/drogi/20200523_114018.jpg"),
             },
             {
               src: require("../assets/drogi/c.jpg"),
             },
             {
-              src: require("../assets/drogi/d.jpg"),
+              src: require("../assets/drogi/20200629_144834.jpg"),
+            },
+            {
+              src: require("../assets/drogi/IMG_20180818_114431.jpg"),
+            },
+            {
+              src: require("../assets/drogi/VID_20200820_125156_exported_22613_1597948953933.jpg"),
             }
           ]
         };

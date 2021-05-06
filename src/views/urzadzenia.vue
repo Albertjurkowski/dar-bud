@@ -77,27 +77,39 @@ export default {
         },
         {
           src: require("../assets/sprzet/spych.png"),
-          title:"równarka",
-          subtitle: "cat j021",
-          describe: "rozstaw jej spychu wynosi 5 m dzieki temu można wjechać w wszystkie potrzebne miejsa",
+          title:"Baukema",
+          subtitle: "SHM 3-100",
+          describe: "Maszyna służąca głównie do profilowania podłoży pod nawierzchnię dróg, rowów i poboczy, wyrównywania nasypów. Stosowane są również do mieszania materiałów drogowych w procesie stabilizacji, do zrywania starej nawierzchni, trawników itp. oraz do wyrównywania powierzchni pola roboczego",
         },
         {
-          src: require("../assets/sprzet/małySpych.png"),
-          title:"Podnośnik",
+          src: require("../assets/sprzet/klamer.png"),
+          title:"kramer",
           subtitle: " cat hw-018",
           describe: " udźwig do 1 tony, jego wymiary pozwalają dostarczyć potrzebne materiały w krótkim czasie",
         },
         {
           src: require("../assets/sprzet/smallciezarowka.png"),
-          title:"samochód dostawczy",
-          subtitle: " ge",
-          describe: "dostarcza wszystkie towary o wadze to 4 ton, pojemność silnika 2.0l  ",
+          title:"Iveco",
+          subtitle: "Deyli",
+          describe: "samochód dostawczy o dopuszczalnej ładowności 3,5 tony",
         },
         {
           src: require("../assets/sprzet/ciężarówka.png"),
           title:"samochód ciężarowy",
           subtitle: "as-78",
           describe: "pozwala w szybki i bezpieczny sposób załadować oraz rozładować ładunek, dzięki wbudowanemu dźwigowi",
+        },
+        {
+          src: require("../assets/sprzet/gosienica.png"),
+          title:"Liebherr",
+          subtitle: "926",
+          describe: "waga 28 ton, systemem niwelacji terenu 3D. Wyposażenie: głowica uchylno-obrotowa",
+        },
+        {
+          src: require("../assets/sprzet/scania.png"),
+          title:"samochód ciężarowy",
+          subtitle: "as-78",
+          describe: "",
         }
       ],
     };
