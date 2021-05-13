@@ -399,7 +399,6 @@
 
     </v-card>
   </div>
-
     <Footer></Footer>
   </v-cointeiner>
 </template>

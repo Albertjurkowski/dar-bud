@@ -2,26 +2,21 @@
   <v-cointeiner>
     <Nav></Nav>
     <v-card
-        height="95%"
-        color="#0A0A0A"
+      color="#0A0A0A"
+      class="pt-15 text-center"
     >
-      <div style="padding-top: 8%" class="text-center">
-        <h1 style="font-size: 70px" class="orange--text text--lighten-1">
+        <h1 class=" py-7 orange--text text--lighten-1">
           <strong>Utrzymanie dróg i placów</strong>
         </h1>
-        <v-card-text class="headline pt-10 white--text" >
+        <v-card-text class="text-md-body-1 white--text" >
           Bierzące utrzymanie drug grunotwych. Posiadamy szeroki wachlarz sprzętu który pomaga nam w profesjonalny sposób wykonywać drogi parkingi oraz prowadzić remonty.
-
         </v-card-text>
-      </div>
-
-      <v-row align="center" class="mx-auto justify-center pt-16">
-        <v-card height="562.5" width="750">
+      <v-row align="center" class="mx-auto justify-center">
+        <v-card width="750" class="py-15" color="#0A0A0A">
           <v-carousel
               cycle
               hide-delimiters
-              height="100%"
-              max-widith="100%"
+              height="562.5"
               hide-delimiter-background
               show-arrows-on-hover
           >
