@@ -1,7 +1,9 @@
 <template>
   <v-cointeiner>
     <Nav></Nav>
-    <v-card class="py-16" height="950" max-widith="100%" color="#0A0A0A" >
+    <v-card color="#0A0A0A" class="py-16" height="950" max-widith="100%">
+
+
       <v-card
           class="mx-auto text-center text-h1-xl justify-center"
           color="#1E1E1EFF"
@@ -70,7 +72,6 @@
         </router-link>
       </v-card>
     </v-card>
-
       <v-carousel
         id="inwestycje"
         cycle
@@ -84,6 +85,8 @@
             v-for="(item,i) in items"
             :key="i"
             :src="item.src"
+            :srcset="item.mobile"
+
 
         >
           <v-row class="title fill-height hidden-xs-only" align="center" justify="center">{{ item.title }}</v-row>
@@ -395,7 +398,8 @@
       </v-row>
 
     </v-card>
-</div>
+  </div>
+
     <Footer></Footer>
   </v-cointeiner>
 </template>
@@ -424,17 +428,62 @@ export default {
       done: false,
       items: [
         {
-          src: require("../assets/drogastreet.jpg"),
-          title: "We are creative"
+          src: require("../assets/inwestycje/IMG_2966.jpg"),
+          mobile: "../assets/inwestycjeMobile/IMG_0055-min.jpg 500w",
+
         },
         {
-          src: require("../assets/pixdroga.jpg"),
-          title: "We are hard worker"
+          src: require("../assets/inwestycje/IMG_1249.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_0055-min.jpg"),
         },
         {
-          src: require("../assets/pixspeed.jpg"),
-          title: "We are professional"
-        }
+          src: require("../assets/inwestycje/IMG_5737.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_1336-min.jpg"),
+        },
+        {
+          src: require("../assets/inwestycje/IMG_5942.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_3365-min.jpg"),
+        },
+        {
+          src: require("../assets/inwestycje/IMG_6158.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_5833-min.jpg"),
+        },
+        {
+          src: require("../assets/inwestycje/IMG_6162.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_5943-min.jpg"),
+        },
+        {
+          src: require("../assets/inwestycje/IMG_6273.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_6187-min.jpg"),
+        },
+        {
+          src: require("../assets/inwestycje/IMG_6488.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_6205-min.jpg"),
+        },
+        {
+          src: require("../assets/inwestycje/IMG_6633.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
+        },
+        {
+          src: require("../assets/inwestycje/IMG_6634.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
+        },
+        {
+          src: require("../assets/inwestycje/IMG_6672.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
+        },
+        {
+          src: require("../assets/inwestycje/IMG_6673.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
+        },
+        {
+          src: require("../assets/inwestycje/IMG_7316.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
+        },
+        {
+          src: require("../assets/inwestycje/IMG_7319.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
+        },
       ]
     };
   },

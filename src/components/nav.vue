@@ -1,16 +1,15 @@
 <template>
-  <v-card>
-    <v-toolbar extended color="#1E1E1EFF">
+  <v-card >
+    <v-app-bar position: fixed  color="#1E1E1EFF"  >
       <router-link @click.native="scrollToTop" :to="{name:'Home'}">
-      <v-flex class="pt-14">
-        <v-img  src="../assets/LOGO DAR BUD bez tla.png" alt="dar-bud" height="150" width="355.28340081" class="pt-1"/>
+      <v-flex class="pt-7">
+        <v-img  src="../assets/LOGOBezTla.png" alt="dar-bud" height="150" width="355.28340081" class="pt-1"/>
       </v-flex>
       </router-link>
         <v-spacer></v-spacer>
       <v-row
         align="center"
         justify="space-around"
-        class="pt-10"
       >
         <v-btn
           text
@@ -56,7 +55,7 @@
         </v-btn>
         </router-link>
       </v-row>
-    </v-toolbar>
+    </v-app-bar>
   </v-card>
 </template>
 
@@ -78,3 +77,6 @@
     }
   }
 </script>
+<style scoped>
+
+</style>
