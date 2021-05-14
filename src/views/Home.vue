@@ -73,8 +73,7 @@
       </v-card>
     </v-card>
       <v-carousel
-        id="inwestycje"
-        cycle
+        class="hidden-sm-and-down"
         hide-delimiters
         height="1000"
         max-widith="100%"
@@ -85,22 +84,33 @@
             v-for="(item,i) in items"
             :key="i"
             :src="item.src"
-            :srcset="item.mobile"
-
-
         >
-          <v-row class="title fill-height hidden-xs-only" align="center" justify="center">{{ item.title }}</v-row>
+
         </v-carousel-item>
       </v-carousel>
+    <v-carousel
+        cycle
+        hide-delimiters
+        max-widith="100%"
+        hide-delimiter-background
+        show-arrows-on-hover
+        class="hidden-md-and-up"
+    >
+    <v-carousel-item
+        v-for="(smart,index) in mobiles"
+        :key="index"
+        :src="smart.mobile"
+    >
+    </v-carousel-item>
+    </v-carousel>
     <v-card
-        class=" text-h1-xl justify-center px-16 text-center"
+        class=" text-h1-xl justify-center text-center"
         :color=orange
-        height="1000"
         width="100%"
         id="nas"
 
     >
-      <div style="padding-top: 8%" class="text-#0A0A0A black--text"  >
+      <div class="text-#0A0A0A black--text pt-5 align-center justify-center">
         <h1 style="font-size: 90px">
           <strong>O NAS</strong>
         </h1>
@@ -113,10 +123,9 @@
           W połączeniu z dokładnością praz oraz przykładaniem się do profesjonalnej
           i indywidualnej realizacji staliśmy się solidnym wykonawcą
         </v-card-subtitle>
-
-          <iframe width="700" height="393" src="https://www.youtube.com/embed/WYtxZQhBaL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
+         <div class="videoWrapper" >
+        <iframe src="https://www.youtube.com/embed/a0glBQXOcl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </div>
 
 
@@ -425,63 +434,95 @@ export default {
       orange: "orange lighten-1",
       player: "",
       done: false,
+      mobiles:[
+        {
+          src: require("../assets/inwestycje/IMG_2966.jpg"),
+          mobile: "../assets/inwestycjeMobile/IMG_0055-min.jpg",
+
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_0055-min.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_1336-min.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_3365-min.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_5833-min.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_5943-min.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_6187-min.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_6205-min.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
+        },
+      ],
       items: [
         {
           src: require("../assets/inwestycje/IMG_2966.jpg"),
-          mobile: "../assets/inwestycjeMobile/IMG_0055-min.jpg 500w",
 
         },
         {
           src: require("../assets/inwestycje/IMG_1249.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_0055-min.jpg"),
         },
         {
           src: require("../assets/inwestycje/IMG_5737.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_1336-min.jpg"),
         },
         {
           src: require("../assets/inwestycje/IMG_5942.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_3365-min.jpg"),
         },
         {
           src: require("../assets/inwestycje/IMG_6158.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_5833-min.jpg"),
         },
         {
           src: require("../assets/inwestycje/IMG_6162.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_5943-min.jpg"),
         },
         {
           src: require("../assets/inwestycje/IMG_6273.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_6187-min.jpg"),
         },
         {
           src: require("../assets/inwestycje/IMG_6488.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_6205-min.jpg"),
         },
         {
           src: require("../assets/inwestycje/IMG_6633.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
         },
         {
           src: require("../assets/inwestycje/IMG_6634.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
         },
         {
           src: require("../assets/inwestycje/IMG_6672.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
         },
         {
           src: require("../assets/inwestycje/IMG_6673.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
         },
         {
           src: require("../assets/inwestycje/IMG_7316.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
         },
         {
           src: require("../assets/inwestycje/IMG_7319.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
         },
       ]
     };
@@ -523,7 +564,20 @@ export default {
 }
 </script>
 <style scoped>
-.v-progress-circular {
-  margin: 1rem;
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  text-align:center;
 }
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+
+  width: 80%;
+  height: 80%;
+
+
+}
+
 </style>

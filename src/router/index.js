@@ -7,6 +7,7 @@ import wykopy from "../views/wykopy"
 import rozbiorka from "../views/rozbiorki.vue"
 import urzadzenia from "../views/urzadzenia.vue"
 import kruszce from "../views/kruszce.vue"
+import referencje from "../views/referencje";
 Vue.use(VueRouter)
 
 const routes = [
@@ -45,6 +46,11 @@ const routes = [
     path: '/sprzet',
     name: 'urzadzenia',
     component: urzadzenia
+  },
+  {
+    path: '/referencje',
+    name: 'referencje',
+    component: referencje
   },
   {
     path: '/about',
