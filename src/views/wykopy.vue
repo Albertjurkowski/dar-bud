@@ -64,10 +64,16 @@
                 show-arrows-on-hover
             >
               <v-carousel-item
-                  v-for="(item,i) in items"
-                  :key="i"
-                  :src="item.src"
+
               >
+
+                <v-img
+                    v-for="(item,i) in items"
+                    :key="i"
+                    :src="item.src"
+                    :setsrc="item.mobile" x3
+                ></v-img>
+
               </v-carousel-item>
             </v-carousel>
           </v-card>
@@ -105,19 +111,24 @@ export default {
       items: [
 
         {
-          src: require("../assets/kanalizacje/20200330_143735.jpg"),
+          src: "../assets/kanalizacje/20200330_143735.jpg",
+          mobile: "../assets/inwestycjeMobile/IMG_0055-min.jpg",
         },
         {
           src: require("../assets/kanalizacje/20200330_143808.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_0055-min.jpg"),
         },
         {
           src: require("../assets/kanalizacje/20191221_180347.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_0055-min.jpg"),
         },
         {
           src: require("../assets/kanalizacje/20191231_152029.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_0055-min.jpg"),
         },
         {
           src: require("../assets/kanalizacje/20200327_164436.jpg"),
+          mobile: require("../assets/inwestycjeMobile/IMG_0055-min.jpg"),
         },
       ]
     };

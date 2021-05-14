@@ -1,17 +1,21 @@
 <template>
   <v-cointeiner>
-    <v-card class="hidden-sm-and-down" >
-      <v-app-bar position: fixed color="#1E1E1EFF"  >
+
+      <v-app-bar fixed color="#1E1E1EFF">
+        <v-cointeiner class="hidden-sm-and-down">
+          <v-row>
         <router-link @click.native="scrollToTop" :to="{name:'Home'}">
-        <v-flex class="pt-7">
+        <v-flex class="pt-7" >
           <v-img  src="../assets/LOGOBezTla.png" alt="dar-bud" height="150" width="355.28340081" class="pt-1"/>
         </v-flex>
         </router-link>
-          <v-spacer></v-spacer>
+            <v-spacer></v-spacer>
         <v-row
           align="center"
           justify="space-around"
+
         >
+          <div class="justify-end">
           <v-btn
             text
             color="grey lighten-3"
@@ -55,40 +59,61 @@
             </v-icon>
           </v-btn>
           </router-link>
+          </div>
+          </v-row>
         </v-row>
+
+        </v-cointeiner>
+        <div class="hidden-md-and-up">
+          <v-app-bar-nav-icon color="white"  @click="drawer = true">  </v-app-bar-nav-icon>
+        </div>
       </v-app-bar>
-    </v-card>
-    <v-toolbar app dark color="blue-grey darken-1" class="hidden-xs-and-down">
-      <v-toolbar-title>Desktop Menu</v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-toolbar-items>
-        <v-btn
-            v-for="item in nav"
-            :key="item.icon"
-            to="#"
-            :title="item.title"
-            flat
-        >{{ item.text }}</v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
+    <v-navigation-drawer
+        v-model="drawer"
+        absolute
+        temporary
+        color="#1E1E1EFF"
+    >
+      <v-list
+          nav
+          dense
+      >
+        <v-list-item-group
+            v-model="group"
+            active-class="deep-orange--text text--lighten-1"
+            class="text--white white--text"
+        >
+          <v-list-item>
+            <v-list-item-title class="text--white white--text">referencje</v-list-item-title>
+          </v-list-item>
 
-    <v-toolbar app dark color="blue-grey darken-3" class="hidden-sm-and-up">
-      <v-toolbar-title>Mobile Menu</v-toolbar-title>
-      <v-spacer></v-spacer>
+          <v-list-item>
+          <v-list-item-title href="/#nas" class="text--white white--text">o nas</v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title  href="/#inwestycje" class="text--white white--text">inwestycje</v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-title  href="/#usluga" class="text--white white--text">usługi</v-list-item-title>
+          </v-list-item>
+          <v-list-item>
+            <v-list-item-icon>
+            <v-icon
+                right
+                dark
+            >
+              mdi-phone-in-talk
+            </v-icon>
+            </v-list-item-icon>
+            <router-link :to="{name:'kontakt'}"  class="text-decoration-none text--white white--text">
+            <v-list-item-title>kontakt</v-list-item-title>
+            </router-link>
+          </v-list-item>
 
-      <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
-        <v-toolbar-side-icon dark slot="activator"></v-toolbar-side-icon>
-        <v-card>
-          <v-toolbar flat color="blue-grey darken-2">
-            <v-toolbar-title>Mobile Menu</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-btn icon @click.native="dialog = false">
-              <v-icon>close</v-icon>
-            </v-btn>
-          </v-toolbar>
-        </v-card>
-      </v-dialog>
-    </v-toolbar>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+
   </v-cointeiner>
 </template>
 
