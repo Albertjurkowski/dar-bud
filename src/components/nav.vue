@@ -73,10 +73,14 @@
         absolute
         temporary
         color="#1E1E1EFF"
+        style="top:0; left:0; position:fixed;"
+
     >
       <v-list
           nav
+          height="100vh"
           dense
+
       >
         <v-list-item-group
             v-model="group"
@@ -84,19 +88,46 @@
             class="text--white white--text"
         >
           <v-list-item>
+            <v-btn
+                href="/#referencje"
+                text
+                color="grey lighten-3"
+            >
             <v-list-item-title class="text--white white--text">referencje</v-list-item-title>
+            </v-btn>
           </v-list-item>
 
           <v-list-item>
-          <v-list-item-title href="/#nas" class="text--white white--text">o nas</v-list-item-title>
+            <v-btn
+                href="/#nas"
+                text
+            >
+          <v-list-item-title class="text--white white--text">o nas</v-list-item-title>
+            </v-btn>
+          </v-list-item>
+
+          <v-list-item>
+            <v-btn
+                href="/#inwestycje"
+                text
+            >
+            <v-list-item-title class="text--white white--text">inwestycje</v-list-item-title>
+            </v-btn>
+          </v-list-item>
+
+          <v-list-item>
+            <v-btn
+                text
+                href="/#usluga"
+            >
+            <v-list-item-title class="text--white white--text">usługi</v-list-item-title>
+            </v-btn>
           </v-list-item>
           <v-list-item>
-            <v-list-item-title  href="/#inwestycje" class="text--white white--text">inwestycje</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-title  href="/#usluga" class="text--white white--text">usługi</v-list-item-title>
-          </v-list-item>
-          <v-list-item>
+            <v-btn
+                text
+                color="grey lighten-3"
+            >
             <v-list-item-icon>
             <v-icon
                 right
@@ -105,9 +136,10 @@
               mdi-phone-in-talk
             </v-icon>
             </v-list-item-icon>
-            <router-link :to="{name:'kontakt'}"  class="text-decoration-none text--white white--text">
+            <router-link :to="{name:'kontakt'}" @click.native="scrollToTop"  class="text-decoration-none text--white white--text">
             <v-list-item-title>kontakt</v-list-item-title>
             </router-link>
+            </v-btn>
           </v-list-item>
 
         </v-list-item-group>

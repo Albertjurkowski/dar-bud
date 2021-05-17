@@ -1,28 +1,28 @@
 <template>
   <v-cointeiner>
     <Nav></Nav>
-    <v-card color="#0A0A0A" class="py-16" height="950" max-widith="100%">
+    <v-card color="#0A0A0A" class="py-16" height="950">
 
 
       <v-card
           class="mx-auto text-center text-h1-xl justify-center"
           color="#1E1E1EFF"
           height="800"
-          width="1750"
+          max-widith="50%"
           v-ripple
 
       >
-        <div
-          style="padding-top: 14%"
-        >
-            <div class="text-center text--white">
+
+        <div class="text-center text--white align-center justify-center"  style="padding-top: 14%">
+          <v-row>
+            <v-col xs="12" sm="12" md="4" lg="4" xl="4">
               <v-progress-circular
                 :rotate="-90"
-                :size="300"
+                :size=size
                 :width="15"
                 :value="value"
                 :color=orange
-                class="ml-16"
+
               >
                 <v-col>
               <h1 class="text-center">{{ value }}%</h1>
@@ -31,14 +31,15 @@
                   </div>
                 </v-col>
               </v-progress-circular>
-
+                </v-col>
+                <v-col  xs="12" sm="12" md="4" lg="4" xl="4">
               <v-progress-circular
                   :rotate="-90"
-                  :size="300"
+                  :size=size
                   :width="15"
                   :value="year"
                   :color=orange
-                  class="ml-16"
+
               >
                 <v-col>
                   <h1 class="text-center">{{ year }}%</h1>
@@ -47,13 +48,15 @@
                   </div>
                 </v-col>
               </v-progress-circular>
+                </v-col>
+                <v-col  xs="12" sm="12" md="4" lg="4" xl="4">
               <v-progress-circular
                   :rotate="-90"
-                  :size="300"
+                  :size=size
                   :width="15"
                   :value="project"
                   :color=orange
-                  class="ml-16"
+
               >
                 <v-col>
                   <h1 class="text-center">{{ lat }} lat</h1>
@@ -62,8 +65,8 @@
                   </div>
                 </v-col>
               </v-progress-circular>
-
-            </div>
+            </v-col>
+          </v-row>
         </div>
         <router-link @click.native="scrollToTop"  :to="{name:'kontakt'}" class="text-decoration-none">
         <div class="pt-11">
@@ -79,6 +82,7 @@
         max-widith="100%"
         hide-delimiter-background
         show-arrows-on-hover
+        id="inwestycje"
       >
         <v-carousel-item
             v-for="(item,i) in items"
@@ -104,17 +108,14 @@
     </v-carousel-item>
     </v-carousel>
     <v-card
-        class=" text-h1-xl justify-center text-center"
+        class=" text-h1-xl text-center pt-8"
         :color=orange
-        width="100%"
         id="nas"
-
     >
-      <div class="text-#0A0A0A black--text pt-5 align-center justify-center">
+      <div class="text-#0A0A0A black--text pt-5">
         <h1 style="font-size: 90px">
           <strong>O NAS</strong>
         </h1>
-
         <v-card-subtitle class="text-md-h5" >
           Firma Dar -Bud Dariusz Bednarczyk działa na rynku od 2006.
           Od samego początku stawialiśmy zarówno na sprawdzone rozwiązania, jak i nowe,
@@ -123,21 +124,19 @@
           W połączeniu z dokładnością praz oraz przykładaniem się do profesjonalnej
           i indywidualnej realizacji staliśmy się solidnym wykonawcą
         </v-card-subtitle>
-         <div class="videoWrapper" >
-        <iframe src="https://www.youtube.com/embed/a0glBQXOcl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+         <div class="videoWrapper" style="">
+            <iframe style="" src="https://www.youtube.com/embed/a0glBQXOcl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </div>
       </div>
 
 
     </v-card>
 <div  id="usluga">
     <v-card
-
       class="text-center text-h1-xl py-10"
       color="#0A0A0A"
       dark
       height="100%"
-      v-ripple
     >
       <v-row>
         <v-col>
@@ -416,7 +415,19 @@
 import Nav from "@/components/nav.vue";
 import Footer from "@/components/footer";
 export default {
-
+  computed: {
+    size () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 200
+        case 'sm': return 200
+        case 'md': return 300
+        case 'lg': return 300
+        case 'xl': return 300
+        default:
+          return 300
+      }
+    },
+  },
   name: 'Home',
   components: {
     Footer,
@@ -437,7 +448,6 @@ export default {
       mobiles:[
         {
           src: require("../assets/inwestycje/IMG_2966.jpg"),
-          mobile: "../assets/inwestycjeMobile/IMG_0055-min.jpg",
 
         },
         {
@@ -555,29 +565,47 @@ export default {
       }
       this.lat += 1
     }, 300)
+
+
   },
   methods:{
     scrollToTop() {
       window.scrollTo(0,0);
     }
-  }
+  },
+
+
 }
 </script>
 <style scoped>
 .videoWrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
+
+
+}
+/*@media only screen and (max-width: 600px) {*/
+
+/*  .videoWrapper {*/
+/*    text-align:center;*/
+/*  }*/
+
+/*  iframe {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*  }*/
+/*}*/
+
+.videoWrapper {
   text-align:center;
-}
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-
-  width: 80%;
-  height: 80%;
-
 
 }
 
+iframe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
 </style>

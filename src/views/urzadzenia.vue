@@ -2,10 +2,10 @@
   <v-cointeiner>
     <Nav></Nav>
     <v-card
-        height="95%"
-        color="#0A0A0A"
+      height="95%"
+      color="#0A0A0A"
     >
-      <div style="padding-top: 5%" class="text-center">
+      <div  class="text-center py-10">
         <h1 style="font-size: 70px" class="orange--text text--lighten-1">
           <strong>Sprzęt</strong>
         </h1>
@@ -18,40 +18,78 @@
         v-for="(item,i) in items"
         :key="i"
       >
-        <v-row>
         <v-card
-          class="mx-auto ml-16 "
-          color="theme--dark"
-          width="600"
-          style="margin-top: 10%"
+            class=" text-h1-xl py-4 ml-8"
+            color="#0A0A0A"
+            dark
+            height="100%"
+        >
+        <v-card
+            class="mx-auto"
+            max-width="344"
+        >
+          <v-img
+                            :src="item.src"
+
+                          ></v-img>
+                          <v-card-text
+                            class="pt-6"
+                            style="position: relative;"
+                          >
+                            <div class="font-weight-light grey--text title mb-2">
+                              {{ item.subtitle }}
+                            </div>
+                            <h3 class="display-1 font-weight-light orange--text mb-2">
+                              {{ item.title }}
+                            </h3>
+                            <div class="font-weight-light title mb-2">
+                              {{ item.describe }}
+                            </div>
+                          </v-card-text>
+        </v-card>
+        </v-card>
 
 
 
-              >
-                <v-img
-                    :src="item.src"
-                    :aspect-ratio="16/9"
-                ></v-img>
-                <v-card-text
-                    class="pt-6"
-                    style="position: relative;"
-                >
 
-                  <div class="font-weight-light grey--text title mb-2">
-                    {{ item.subtitle }}
-                  </div>
-                  <h3 class="display-1 font-weight-light orange--text mb-2">
-                    {{ item.title }}
-                  </h3>
-                  <div class="font-weight-light title mb-2">
-                    {{ item.describe }}
-                  </div>
-                </v-card-text>
-              </v-card>
-        </v-row>
+<!--        <v-card class="py-4 justify-space-around ml-8"-->
+<!--                height="100%"-->
+<!--                dark-->
+<!--                color="#0A0A0A">-->
+<!--        <v-row  >-->
+<!--          <v-col>-->
+<!--        <v-card-->
+<!--          class="mx-auto"-->
+<!--          color="theme&#45;&#45;dark"-->
+<!--          max-width="344"-->
+
+<!--        >-->
+<!--              <v-img-->
+<!--                :src="item.src"-->
+
+<!--              ></v-img>-->
+<!--              <v-card-text-->
+<!--                class="pt-6"-->
+<!--                style="position: relative;"-->
+<!--              >-->
+<!--                <div class="font-weight-light grey&#45;&#45;text title mb-2">-->
+<!--                  {{ item.subtitle }}-->
+<!--                </div>-->
+<!--                <h3 class="display-1 font-weight-light orange&#45;&#45;text mb-2">-->
+<!--                  {{ item.title }}-->
+<!--                </h3>-->
+<!--                <div class="font-weight-light title mb-2">-->
+<!--                  {{ item.describe }}-->
+<!--                </div>-->
+<!--              </v-card-text>-->
+<!--            </v-card>-->
+<!--          </v-col>-->
+<!--        </v-row>-->
+<!--        </v-card>-->
       </div>
       </v-row>
     </v-card>
+
     <Footer></Footer>
   </v-cointeiner>
 </template>
@@ -113,6 +151,8 @@ export default {
         }
       ],
     };
+  },
+  methods:{
   }
 };
 </script>
