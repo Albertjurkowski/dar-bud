@@ -2,6 +2,7 @@
   <v-cointeiner>
     <Nav></Nav>
     <v-card
+        class="pt-10"
       height="95%"
       color="#0A0A0A"
     >
@@ -19,73 +20,51 @@
         :key="i"
       >
         <v-card
-            class=" text-h1-xl py-4 ml-8"
+            class="text-h1-xl py-4 ml-8"
+            justify="center"
             color="#0A0A0A"
             dark
-            height="100%"
+
         >
         <v-card
-            class="mx-auto"
-            max-width="344"
+            :width="height"
+
         >
           <v-img
-                            :src="item.src"
+            :src="item.src"
+          ></v-img>
+            <v-card-text
+              class="pt-6"
+              style="position: relative;"
+            >
+              <v-card-title class="orange--text text--lighten-1">
+                {{ item.title }}
+              </v-card-title>
 
-                          ></v-img>
-                          <v-card-text
-                            class="pt-6"
-                            style="position: relative;"
-                          >
-                            <div class="font-weight-light grey--text title mb-2">
-                              {{ item.subtitle }}
-                            </div>
-                            <h3 class="display-1 font-weight-light orange--text mb-2">
-                              {{ item.title }}
-                            </h3>
-                            <div class="font-weight-light title mb-2">
-                              {{ item.describe }}
-                            </div>
-                          </v-card-text>
+              <v-card-subtitle class="white--text">
+                {{item.subtitle }}
+              </v-card-subtitle>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn
+                    icon
+                    color="white"
+                    @click="item.show = !item.show"
+                >
+                  <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                </v-btn>
+              </v-card-actions>
+              <v-expand-transition>
+                <div v-show="item.show">
+                  <v-divider></v-divider>
+                  <v-card-text>
+                    {{ item.description }}
+                  </v-card-text>
+                </div>
+              </v-expand-transition>
+            </v-card-text>
         </v-card>
         </v-card>
-
-
-
-
-<!--        <v-card class="py-4 justify-space-around ml-8"-->
-<!--                height="100%"-->
-<!--                dark-->
-<!--                color="#0A0A0A">-->
-<!--        <v-row  >-->
-<!--          <v-col>-->
-<!--        <v-card-->
-<!--          class="mx-auto"-->
-<!--          color="theme&#45;&#45;dark"-->
-<!--          max-width="344"-->
-
-<!--        >-->
-<!--              <v-img-->
-<!--                :src="item.src"-->
-
-<!--              ></v-img>-->
-<!--              <v-card-text-->
-<!--                class="pt-6"-->
-<!--                style="position: relative;"-->
-<!--              >-->
-<!--                <div class="font-weight-light grey&#45;&#45;text title mb-2">-->
-<!--                  {{ item.subtitle }}-->
-<!--                </div>-->
-<!--                <h3 class="display-1 font-weight-light orange&#45;&#45;text mb-2">-->
-<!--                  {{ item.title }}-->
-<!--                </h3>-->
-<!--                <div class="font-weight-light title mb-2">-->
-<!--                  {{ item.describe }}-->
-<!--                </div>-->
-<!--              </v-card-text>-->
-<!--            </v-card>-->
-<!--          </v-col>-->
-<!--        </v-row>-->
-<!--        </v-card>-->
       </div>
       </v-row>
     </v-card>
@@ -104,6 +83,18 @@ export default {
     Footer,
     Nav
   },
+  computed: {
+    height () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 300
+        case 'sm': return 340
+        case 'md': return 600
+        case 'lg': return 600
+        case 'xl': return 800
+        default: return 344
+      }
+    },
+  },
   data() {
     return {
       items: [
@@ -111,43 +102,50 @@ export default {
           src: require("../assets/sprzet/koparka.png"),
           title:"koparka",
           subtitle: " ets-213",
-          describe: "koparka o wadze 8t najlepsza do kopania w najtrudniejszych warunkach jej ramie siega do 20 m ",
+          description: "koparka o wadze 8t najlepsza do kopania w najtrudniejszych warunkach jej ramie siega do 20 m ",
+          show: false
         },
         {
           src: require("../assets/sprzet/spych.png"),
           title:"Baukema",
           subtitle: "SHM 3-100",
-          describe: "Maszyna służąca głównie do profilowania podłoży pod nawierzchnię dróg, rowów i poboczy, wyrównywania nasypów. Stosowane są również do mieszania materiałów drogowych w procesie stabilizacji, do zrywania starej nawierzchni, trawników itp. oraz do wyrównywania powierzchni pola roboczego",
+          description: "Maszyna służąca głównie do profilowania podłoży pod nawierzchnię dróg, rowów i poboczy, wyrównywania nasypów. Stosowane są również do mieszania materiałów drogowych w procesie stabilizacji, do zrywania starej nawierzchni, trawników itp. oraz do wyrównywania powierzchni pola roboczego",
+          show: false
         },
         {
           src: require("../assets/sprzet/klamer.png"),
           title:"kramer",
           subtitle: " cat hw-018",
-          describe: " udźwig do 1 tony, jego wymiary pozwalają dostarczyć potrzebne materiały w krótkim czasie",
+          description: " udźwig do 1 tony, jego wymiary pozwalają dostarczyć potrzebne materiały w krótkim czasie",
+          show: false
         },
         {
           src: require("../assets/sprzet/smallciezarowka.png"),
           title:"Iveco",
           subtitle: "Deyli",
-          describe: "samochód dostawczy o dopuszczalnej ładowności 3,5 tony",
+          description: "samochód dostawczy o dopuszczalnej ładowności 3,5 tony",
+          show: false
         },
         {
           src: require("../assets/sprzet/ciężarówka.png"),
           title:"samochód ciężarowy",
           subtitle: "as-78",
-          describe: "pozwala w szybki i bezpieczny sposób załadować oraz rozładować ładunek, dzięki wbudowanemu dźwigowi",
+          description: "pozwala w szybki i bezpieczny sposób załadować oraz rozładować ładunek, dzięki wbudowanemu dźwigowi",
+          show: false
         },
         {
           src: require("../assets/sprzet/gosienica.png"),
           title:"Liebherr",
           subtitle: "926",
-          describe: "waga 28 ton, systemem niwelacji terenu 3D. Wyposażenie: głowica uchylno-obrotowa",
+          description: "waga 28 ton, systemem niwelacji terenu 3D. Wyposażenie: głowica uchylno-obrotowa",
+          show: false
         },
         {
           src: require("../assets/sprzet/scania.png"),
           title:"samochód ciężarowy",
           subtitle: "as-78",
-          describe: "",
+          description: "",
+          show: false
         }
       ],
     };

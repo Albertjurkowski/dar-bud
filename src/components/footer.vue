@@ -1,9 +1,9 @@
 <template>
   <v-footer
-
       padless
   >
     <v-card
+        width="100%"
         :color=orange
         class="black--text text-center"
     >

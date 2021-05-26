@@ -14,77 +14,126 @@
         </v-card-text>
       </div>
 
-      <v-row align="center" class="mx-auto justify-center pt-16">
-        <v-card height="562.5" width="750" color="theme--dark">
-          <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
-            <strong> Wyburzenia budynków gospodarczych, mieszkalnych i
-              Przemysłowych</strong>
-          </h1>
+      <div class="hidden-sm-and-down">
+        <v-row align="center" class="mx-auto justify-center pt-16">
+          <v-card height="562.5" width="750" color="theme--dark">
+            <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
+              <strong> Wyburzenia budynków gospodarczych, mieszkalnych i
+                Przemysłowych</strong>
+            </h1>
 
-          <v-card-text class="headline pt-10 white--text" >
-            PRZYGOTOWANIE TERENU POD BUDOWĘ
-          </v-card-text>
-        </v-card>
-        <v-card height="562.5" width="750">
-          <v-carousel
-              cycle
-              hide-delimiters
-              height="100%"
-              max-widith="100%"
-              hide-delimiter-background
-              show-arrows-on-hover
-          >
-            <v-carousel-item
-                v-for="(item,i) in items"
-                :key="i"
-                :src="item.src"
+            <v-card-text class="headline pt-10 white--text" >
+              PRZYGOTOWANIE TERENU POD BUDOWĘ
+            </v-card-text>
+          </v-card>
+          <v-card height="562.5" width="750">
+            <v-carousel
+                cycle
+                hide-delimiters
+                height="100%"
+                max-widith="100%"
+                hide-delimiter-background
+                show-arrows-on-hover
             >
-            </v-carousel-item>
-          </v-carousel>
-        </v-card>
-      </v-row>
+              <v-carousel-item
+                  v-for="(item,i) in items"
+                  :key="i"
+                  :src="item.src"
+              >
+              </v-carousel-item>
+            </v-carousel>
+          </v-card>
+        </v-row>
 
-      <v-row align="center" class="mx-auto justify-center pt-16">
-        <v-card height="562.5" width="750">
-          <v-carousel
-              cycle
-              hide-delimiters
-              height="100%"
-              max-widith="100%"
-              hide-delimiter-background
-              show-arrows-on-hover
-          >
-            <v-carousel-item
-                v-for="(item,i) in karczowanie"
-                :key="i"
-                :src="item.src"
+        <v-row align="center" class="mx-auto justify-center pt-16">
+          <v-card height="562.5" width="750">
+            <v-carousel
+                cycle
+                hide-delimiters
+                height="100%"
+                max-widith="100%"
+                hide-delimiter-background
+                show-arrows-on-hover
             >
-            </v-carousel-item>
-          </v-carousel>
-        </v-card>
-        <v-card height="562.5" width="750" color="theme--dark">
-          <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
-            <strong> Wycinka drzew, karczowanie, wyrywanie i wywóz karp</strong>
-          </h1>
+              <v-carousel-item
+                  v-for="(item,i) in karczowanie"
+                  :key="i"
+                  :src="item.src"
+              >
+              </v-carousel-item>
+            </v-carousel>
+          </v-card>
+          <v-card height="562.5" width="750" color="theme--dark">
+            <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
+              <strong> Wycinka drzew, karczowanie, wyrywanie i wywóz karp</strong>
+            </h1>
 
-          <v-card-text class="headline pt-10 white--text" >
-            Niwelacja, podnoszenie i kształtowanie terenu, skarpowanie
-          </v-card-text>
-        </v-card>
-      </v-row>
+            <v-card-text class="headline pt-10 white--text" >
+              Niwelacja, podnoszenie i kształtowanie terenu, skarpowanie
+            </v-card-text>
+          </v-card>
+        </v-row>
 
-      <v-row align="center" class="mx-auto justify-center pt-16">
-        <v-card height="562.5" width="750" color="theme--dark">
-          <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
-            <strong> Osuszanie terenu</strong>
-          </h1>
+        <v-row align="center" class="mx-auto justify-center pt-16">
+          <v-card height="562.5" width="750" color="theme--dark">
+            <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
+              <strong> Osuszanie terenu</strong>
+            </h1>
 
-          <v-card-text class="headline pt-10 white--text" >
-            Nasze wykopy są wykonywane dzięki sprzętu o zawansowaniej technologi
-          </v-card-text>
-        </v-card>
-        <v-card height="562.5" width="750"><img src="../assets/rozbiurka.jpg" alt="rozbiurka" width="100%" height="100%"></v-card>
-      </v-row>
+            <v-card-text class="headline pt-10 white--text" >
+              Nasze wykopy są wykonywane dzięki sprzętu o zawansowaniej technologi
+            </v-card-text>
+          </v-card>
+          <v-card height="562.5" width="750"><img src="../assets/rozbiurka.jpg" alt="rozbiurka" width="100%" height="100%"></v-card>
+        </v-row>
+      </div>
+      <div
+          v-for="(item, index) in wykopy"
+          :key="index"
+          class="pt-10
+
+  "
+      >
+      <v-card
+          class="mx-auto hidden-md-and-up"
+          max-width="344"
+          color="theme--dark"
+
+      >
+        <v-img
+            src="../assets/rozbiurka.jpg"
+            height="200px"
+        ></v-img>
+
+        <v-card-title class="orange--text text--lighten-1">
+          {{ item.title }}
+        </v-card-title>
+
+        <v-card-subtitle class="white--text">
+          {{item.subtitle }}
+        </v-card-subtitle>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+
+          <v-btn
+              icon
+              color="white"
+              @click="item.show = !item.show"
+          >
+            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+          </v-btn>
+        </v-card-actions>
+
+        <v-expand-transition>
+          <div v-show="!item.show">
+            <v-divider></v-divider>
+            <v-card-text>
+              {{ item.description }}
+            </v-card-text>
+          </div>
+        </v-expand-transition>
+      </v-card>
+      </div>
     </v-card>
     <Footer></Footer>
   </v-cointeiner>
@@ -103,6 +152,23 @@ export default {
   data() {
     return {
       orange: "orange lighten-1",
+      wykopy: [
+        {
+        title:"Wyburzenia budynków gospodarczych, mieszkalnych i Przemysłowych",
+        subtitle:"",
+        description:"",
+        },
+        {
+          title: "Wycinka drzew, karczowanie, wyrywanie i wywóz karp",
+        subtitle:"",
+        description:"",
+        },
+        {
+          title:"Osuszanie terenu",
+        subtitle:"",
+        description:"",
+        }
+      ],
       items: [
 
         {

@@ -73,12 +73,11 @@
         absolute
         temporary
         color="#1E1E1EFF"
-        style="top:0; left:0; position:fixed;"
+        style="position:fixed;"
 
     >
       <v-list
           nav
-          height="100vh"
           dense
 
       >
