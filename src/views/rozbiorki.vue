@@ -14,7 +14,7 @@
         </v-card-text>
       </div>
 
-      <div class="hidden-sm-and-down">
+      <div class="hidden-md-and-down">
         <v-row align="center" class="mx-auto justify-center pt-16">
           <v-card height="562.5" width="750" color="theme--dark">
             <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
@@ -84,33 +84,37 @@
               Nasze wykopy są wykonywane dzięki sprzętu o zawansowaniej technologi
             </v-card-text>
           </v-card>
-          <v-card height="562.5" width="750"><img src="../assets/rozbiurka.jpg" alt="rozbiurka" width="100%" height="100%"></v-card>
+          <v-card height="562.5" width="750"><img src="../assets/rozbiurki/5.jpg" alt="rozbiurka" width="100%" height="100%"></v-card>
         </v-row>
       </div>
-      <div
-          v-for="(item, index) in wykopy"
-          :key="index"
-          class="pt-10
-
-  "
-      >
+      <div class="pt-10"></div>
       <v-card
-          class="mx-auto hidden-md-and-up"
+          class=" mx-auto hidden-lg-and-up"
           max-width="344"
           color="theme--dark"
-
       >
-        <v-img
-            src="../assets/rozbiurka.jpg"
-            height="200px"
-        ></v-img>
+        <v-carousel
+            cycle
+            hide-delimiters
+            height="100%"
+            max-widith="100%"
+            hide-delimiter-background
+            show-arrows-on-hover
+        >
+          <v-carousel-item
+              v-for="(item,i) in items"
+              :key="i"
+              :src="item.src"
+          >
+          </v-carousel-item>
+        </v-carousel>
 
         <v-card-title class="orange--text text--lighten-1">
-          {{ item.title }}
+          Wyburzenia budynków gospodarczych, mieszkalnych i Przemysłowych
         </v-card-title>
 
         <v-card-subtitle class="white--text">
-          {{item.subtitle }}
+
         </v-card-subtitle>
         <v-card-actions>
           <v-spacer></v-spacer>
@@ -118,22 +122,111 @@
           <v-btn
               icon
               color="white"
-              @click="item.show = !item.show"
+              @click="show = !show"
           >
             <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+
           </v-btn>
         </v-card-actions>
 
         <v-expand-transition>
-          <div v-show="!item.show">
+          <div v-show="show">
             <v-divider></v-divider>
             <v-card-text>
-              {{ item.description }}
+
             </v-card-text>
           </div>
         </v-expand-transition>
       </v-card>
-      </div>
+      <div class="pt-10"></div>
+      <v-card
+          class=" mx-auto hidden-lg-and-up"
+          max-width="344"
+          color="theme--dark"
+      >
+      <v-img src="">
+      </v-img>
+
+        <v-card-title class="orange--text text--lighten-1">
+          Osuszanie terenu
+        </v-card-title>
+
+        <v-card-subtitle class="white--text">
+
+        </v-card-subtitle>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+
+          <v-btn
+              icon
+              color="white"
+              @click="show = !show"
+          >
+            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+
+          </v-btn>
+        </v-card-actions>
+
+        <v-expand-transition>
+          <div v-show="show">
+            <v-divider></v-divider>
+            <v-card-text>
+
+            </v-card-text>
+          </div>
+        </v-expand-transition>
+      </v-card>
+      <div class="pt-10"></div>
+      <v-card
+          class=" mx-auto hidden-lg-and-up"
+          max-width="344"
+          color="theme--dark"
+      >
+        <v-carousel
+            cycle
+            hide-delimiters
+            height="100%"
+            max-widith="100%"
+            hide-delimiter-background
+            show-arrows-on-hover
+        >
+          <v-carousel-item
+              v-for="(item,i) in karczowanie"
+              :key="i"
+              :src="item.src"
+          >
+          </v-carousel-item>
+        </v-carousel>
+
+        <v-card-title class="orange--text text--lighten-1">
+          Wycinka drzew, karczowanie, wyrywanie i wywóz karp
+        </v-card-title>
+
+        <v-card-subtitle class="white--text">
+
+        </v-card-subtitle>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+
+          <v-btn
+              icon
+              color="white"
+              @click="show = !show"
+          >
+            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+
+          </v-btn>
+        </v-card-actions>
+
+        <v-expand-transition>
+          <div v-show="show">
+            <v-divider></v-divider>
+            <v-card-text>
+
+            </v-card-text>
+          </div>
+        </v-expand-transition>
+      </v-card>
     </v-card>
     <Footer></Footer>
   </v-cointeiner>
@@ -151,64 +244,62 @@ export default {
   },
   data() {
     return {
+      show: false,
       orange: "orange lighten-1",
       wykopy: [
         {
-        title:"Wyburzenia budynków gospodarczych, mieszkalnych i Przemysłowych",
+        title:"",
         subtitle:"",
         description:"",
+        src: require("../assets/rozbiurki/1.jpg"),
         },
         {
-          title: "Wycinka drzew, karczowanie, wyrywanie i wywóz karp",
+          title:"",
         subtitle:"",
         description:"",
-        },
-        {
-          title:"Osuszanie terenu",
-        subtitle:"",
-        description:"",
+          src: require("../assets/rozbiurki/2.jpg"),
+
         }
       ],
       items: [
 
         {
-          src: require("../assets/rozbiurki/20191021_122006.jpg"),
+          src: require("../assets/rozbiurki/1.jpg"),
         },
         {
-          src: require("../assets/rozbiurki/20191021_132511.jpg"),
+          src: require("../assets/rozbiurki/2.jpg"),
         },
         {
-          src: require("../assets/rozbiurki/20191021_151950.jpg"),
+          src: require("../assets/rozbiurki/3.jpg"),
         },
         {
-          src: require("../assets/rozbiurki/20191021_161102.jpg"),
+          src: require("../assets/rozbiurki/4.jpg"),
         },
       ],
       karczowanie:[
         {
-          src:require("../assets/karczowanie/IMG_20201208_125802.jpg")
+          src:require("../assets/karczowanie/1.jpg")
         },
         {
-          src:require("../assets/karczowanie/IMG_20180625_092049.jpg")
+          src:require("../assets/karczowanie/2.jpg")
         },
         {
-          src:require("../assets/karczowanie/IMG_20180626_111740.jpg")
+          src:require("../assets/karczowanie/3.jpg")
         },
         {
-          src:require("../assets/karczowanie/IMG_20180626_111813.jpg")
+          src:require("../assets/karczowanie/4.jpg")
         },
         {
-          src:require("../assets/karczowanie/IMG_20201203_080338.jpg")
+          src:require("../assets/karczowanie/5.jpg")
         },
         {
-          src:require("../assets/karczowanie/IMG_20201203_083745.jpg")
+          src:require("../assets/karczowanie/6.jpg")
         },
         {
-          src:require("../assets/karczowanie/IMG_20201208_125746.jpg")
+          src:require("../assets/karczowanie/7.jpg")
         },
-
         {
-          src:require("../assets/karczowanie/IMG_20201216_145305.jpg")
+          src:require("../assets/karczowanie/8.jpg")
         },
       ]
     };

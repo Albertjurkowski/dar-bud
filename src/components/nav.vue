@@ -1,28 +1,30 @@
 <template>
   <v-cointeiner>
 
-      <v-app-bar fixed color="#1E1E1EFF">
-        <v-cointeiner class="hidden-sm-and-down">
+        <div class="hidden-md-and-down">
+          <v-app-bar fixed color="#1E1E1E" lights-out>
           <v-row>
         <router-link @click.native="scrollToTop" :to="{name:'Home'}">
-        <v-flex class="pt-7" >
-          <v-img  src="../assets/LOGOBezTla.png" alt="dar-bud" height="150" width="355.28340081" class="pt-1"/>
+        <v-flex class="pt-7 ml-16" >
+          <v-img  src="../assets/Logobt.png" alt="dar-bud" height="150" width="355.28340081" class="pt-1"/>
         </v-flex>
         </router-link>
             <v-spacer></v-spacer>
         <v-row
           align="center"
-          justify="space-around"
-
+          justify="end"
+          class="text-left mr-16"
         >
-          <div class="justify-end">
-          <v-btn
-            text
-            color="grey lighten-3"
-          >
-            referencje
-          </v-btn>
-          <v-btn
+          <div class="justify-end text-left">
+          <router-link :to="{name:'referencje'}" class="text-decoration-none">
+            <v-btn
+              text
+              color="grey lighten-3"
+            >
+              referencje
+            </v-btn>
+          </router-link>
+            <v-btn
             href="/#nas"
             text
             color="grey lighten-3"
@@ -62,24 +64,35 @@
           </div>
           </v-row>
         </v-row>
-
-        </v-cointeiner>
-        <div class="hidden-md-and-up">
-          <v-app-bar-nav-icon color="white"  @click="drawer = true">  </v-app-bar-nav-icon>
+          </v-app-bar>
         </div>
+
+    <div class="hidden-lg-and-up">
+      <v-app-bar fixed color="#1E1E1E" lights-out >
+        <v-app-bar-nav-icon color="white" @click="drawer = true"></v-app-bar-nav-icon>
+        <div class="mx-auto">
+        <router-link @click.native="scrollToTop" :to="{name:'Home'}">
+
+          <v-flex class="pt-5 ">
+            <v-img   src="../assets/Logobt.png" alt="dar-bud" height="108" width="255.8" />
+          </v-flex>
+        </router-link>
+        </div>
+
+
       </v-app-bar>
-    <v-navigation-drawer
+      <v-navigation-drawer
+        opacity="0.2"
         v-model="drawer"
-        absolute
         temporary
         color="#1E1E1EFF"
         style="position:fixed;"
 
+
     >
       <v-list
-          nav
-          dense
-
+        nav
+        dense
       >
         <v-list-item-group
             v-model="group"
@@ -145,6 +158,7 @@
       </v-list>
     </v-navigation-drawer>
 
+  </div>
   </v-cointeiner>
 </template>
 

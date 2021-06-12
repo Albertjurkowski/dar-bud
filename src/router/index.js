@@ -8,6 +8,9 @@ import rozbiorka from "../views/rozbiorki.vue"
 import urzadzenia from "../views/urzadzenia.vue"
 import kruszce from "../views/kruszce.vue"
 import referencje from "../views/referencje";
+import ogrodzenia from "../views/ogrodzenia";
+import chodnikiParkingi from "../views/chodnikiParkingi"
+import budynki from "../views/budynki";
 Vue.use(VueRouter)
 
 const routes = [
@@ -51,6 +54,21 @@ const routes = [
     path: '/referencje',
     name: 'referencje',
     component: referencje
+  },
+  {
+    path: '/chodnikiParkingi',
+    name: 'chodnikiParkingi',
+    component: chodnikiParkingi
+  },
+  {
+    path: '/ogrodzenia',
+    name: 'ogrodzenia',
+    component: ogrodzenia
+  },
+  {
+    path: '/budynki',
+    name: 'budynki',
+    component: budynki
   },
   {
     path: '/about',

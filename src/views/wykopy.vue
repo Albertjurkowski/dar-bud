@@ -13,10 +13,10 @@
            Nasze wykopy są wykonywane dzięki sprzętu o zawansowaniej technologi
           </v-card-text>
         </div>
-        <div class="hidden-sm-and-down">
+        <div class="hidden-md-and-down">
           <v-row align="center" class="mx-auto justify-center pt-16">
           <v-card height="562.5" width="750" color="theme--dark">
-            <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
+            <h1 style=" font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
               <strong> Szerokoprzestrzenne</strong>
             </h1>
 
@@ -24,11 +24,11 @@
               Polecane są na przykład wówczas, gdy działka znajduje się na gruntach niezbyt spoistych, bądź wtedy, gdy dom ma być w całości lub częściowo podpiwniczony. Skarpy takiego dużego wykopu powinny być nachylone pod kątem 35-40°. Dno wykopu powinno się znaleźć poniżej poziomu przemarzania gruntu. W zależności od tego, w której strefie przemarzania gruntu znajduje się dana działka, poziom ten wynosi od 0,8 do 1,4 m. Deskowanie ław będziemy robić na wyrównanym dnie wykopu szerokoprzestrzennego.
             </v-card-text>
           </v-card>
-            <v-card height="562.5" width="750"><img src="../assets/rozbiurka.jpg" alt="rozbiurka" width="100%" height="100%"> </v-card>
+            <v-card height="562.5" width="750"><img src="../assets/rozbiurki/5.jpg" alt="rozbiurka" width="100%" height="100%"> </v-card>
           </v-row>
 
           <v-row align="center" class="mx-auto justify-center pt-16">
-            <v-card height="562.5" width="750"><img src="../assets/lawyfundamentalne.jpg" alt="ławy fundamentalne" width="100%" height="100%"></v-card>
+            <v-card height="562.5" width="750"><img src="../assets/fundamenty/lawyfundamentalne.jpg" alt="ławy fundamentalne" width="100%" height="100%"></v-card>
             <v-card height="562.5" width="750" color="theme--dark">
               <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
                 <strong> Ławy fundamentowe</strong>
@@ -50,7 +50,7 @@
                 Podziemny zbiornik, zazwyczaj bezodpływowy, wykonany np. z betonu, do którego odprowadzane są ścieki z domowych urządzeń kanalizacyjnych.
               </v-card-text>
             </v-card>
-            <v-card height="562.5" width="750"><img src="../assets/rozbiurka.jpg"  alt="rozbiurka" width="100%" height="100%"></v-card>
+            <v-card height="562.5" width="750"><img src="../assets/rozbiurki/5.jpg"  alt="rozbiurka" width="100%" height="100%"></v-card>
           </v-row>
 
           <v-row align="center" class="mx-auto justify-center pt-16">
@@ -96,7 +96,7 @@
         >
           <v-card
 
-              class="mx-auto hidden-md-and-up "
+              class="mx-auto hidden-lg-and-up "
               max-width="344"
               color="theme--dark"
 
@@ -153,8 +153,6 @@ export default {
   data() {
     return {
       show: false,
-
-
       orange: "orange lighten-1",
       wykopy:[
         {
@@ -162,7 +160,7 @@ export default {
         subtitle: "Polecane są na przykład wówczas, gdy działka znajduje się na gruntach niezbyt spoistych",
         description: "Bądź wtedy, gdy dom ma być w całości lub częściowo podpiwniczony. Skarpy takiego dużego wykopu powinny być nachylone pod kątem 35-40°. Dno wykopu powinno się znaleźć poniżej poziomu przemarzania gruntu. W zależności od tego, w której strefie przemarzania gruntu znajduje się dana działka, poziom ten wynosi od 0,8 do 1,4 m. Deskowanie ław będziemy robić na wyrównanym dnie wykopu szerokoprzestrzennego.",
         show:"true",
-        src: "../assets/"
+        src: "../assets/rozbiurki/"
   },
         {
         title:"Ławy fundamentowe",
@@ -187,28 +185,35 @@ export default {
           show:"false",
           src: "../assets/"
         },
+        {
+        title:"Odwodnienia i drenaże",
+        subtitle:"W celu uniknięcia zawilgocenia fundamentóœ domu lub zalenaj piwnicy warto pomyśleć o drenażu lub odwodnieniu liniowym.",
+        description:"Jeżeli problemem jest zbyt wysoki poziom wód gruntowych stosujemy drenaż opaskowy. Jest to system rur drenarskich okalający budynek. Odwodnienia liniowe to system korytek i ruszty które wkopujemy minimum 3mm poniżej terenu powierzchni terenu.",
+          show:"false",
+          src: "../assets/"
+        },
       ],
       items: [
 
         {
-          src: "../assets/kanalizacje/20200330_143735.jpg",
-          mobile: "../assets/inwestycjeMobile/IMG_0055-min.jpg",
+          src: "../assets/kanalizacje/1.jpg",
+          mobile: "../assets/inwestycjeMobile/1.jpg",
         },
         {
-          src: require("../assets/kanalizacje/20200330_143808.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_0055-min.jpg"),
+          src: require("../assets/kanalizacje/2.jpg"),
+          mobile: require("../assets/inwestycjeMobile/2.jpg"),
         },
         {
-          src: require("../assets/kanalizacje/20191221_180347.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_0055-min.jpg"),
+          src: require("../assets/kanalizacje/3.jpg"),
+          mobile: require("../assets/inwestycjeMobile/3.jpg"),
         },
         {
-          src: require("../assets/kanalizacje/20191231_152029.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_0055-min.jpg"),
+          src: require("../assets/kanalizacje/4.jpg"),
+          mobile: require("../assets/inwestycjeMobile/4.jpg"),
         },
         {
-          src: require("../assets/kanalizacje/20200327_164436.jpg"),
-          mobile: require("../assets/inwestycjeMobile/IMG_0055-min.jpg"),
+          src: require("../assets/kanalizacje/5.jpg"),
+          mobile: require("../assets/inwestycjeMobile/5.jpg"),
         },
       ]
     };

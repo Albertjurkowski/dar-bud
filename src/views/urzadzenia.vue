@@ -5,6 +5,7 @@
         class="pt-10"
       height="95%"
       color="#0A0A0A"
+      width="100%"
     >
       <div  class="text-center py-10">
         <h1 style="font-size: 70px" class="orange--text text--lighten-1">
@@ -16,11 +17,12 @@
       </div>
       <v-row>
       <div
-        v-for="(item,i) in items"
+        v-for="(item, i) in items"
         :key="i"
+        class="py-4"
       >
         <v-card
-            class="text-h1-xl py-4 ml-8"
+            class="text-h1-xl ml-8"
             justify="center"
             color="#0A0A0A"
             dark
@@ -28,7 +30,6 @@
         >
         <v-card
             :width="height"
-
         >
           <v-img
             :src="item.src"
@@ -86,10 +87,10 @@ export default {
   computed: {
     height () {
       switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return 300
-        case 'sm': return 340
-        case 'md': return 600
-        case 'lg': return 600
+        case 'xs': return 340
+        case 'sm': return 350
+        case 'md': return 420
+        case 'lg': return 570
         case 'xl': return 800
         default: return 344
       }
@@ -100,9 +101,9 @@ export default {
       items: [
         {
           src: require("../assets/sprzet/koparka.png"),
-          title:"koparka",
-          subtitle: " ets-213",
-          description: "koparka o wadze 8t najlepsza do kopania w najtrudniejszych warunkach jej ramie siega do 20 m ",
+          title:"Liebherr",
+          subtitle: "A914",
+          description: "Koparka  Compact Litronic w wadze 16 ton przeznaczona do kopania i przenoszenia urobku sypkiego.maksymalny zasięg maszyny 8,55 metra",
           show: false
         },
         {
@@ -115,8 +116,8 @@ export default {
         {
           src: require("../assets/sprzet/klamer.png"),
           title:"kramer",
-          subtitle: " cat hw-018",
-          description: " udźwig do 1 tony, jego wymiary pozwalają dostarczyć potrzebne materiały w krótkim czasie",
+          subtitle: "650",
+          description: "Ładowarka  3.9 tony  wyposażona w osprzęty : widły paletowe, łyżka uchylna i zwykła łyżka tzw szufla służy do rozładunku i załadunku lub przewozu palet , piasku i kruszyw.",
           show: false
         },
         {
@@ -141,8 +142,15 @@ export default {
           show: false
         },
         {
-          src: require("../assets/sprzet/scania.png"),
-          title:"samochód ciężarowy",
+          src: require("../assets/sprzet/kopareczka.png"),
+          title:"mala koparka",
+          subtitle: "as-78",
+          description: "",
+          show: false
+        },
+        {
+          src: require("../assets/sprzet/volvo.png"),
+          title:"mala koparka",
           subtitle: "as-78",
           description: "",
           show: false

@@ -1,21 +1,25 @@
 <template>
   <v-cointeiner>
     <Nav></Nav>
-    <v-card color="#0A0A0A" class="py-16" height="950">
-
-
+    <v-card color="#0A0A0A"
+            width="100%"
+            height="950"
+            class=" pt-14 d-flex align-content-center flex-wrap"
+            flat
+            tile
+    >
       <v-card
-          class="mx-auto text-center text-h1-xl justify-center"
-          color="#1E1E1EFF"
-          height="800"
-          max-widith="50%"
-          v-ripple
+          class="mx-auto d-flex align-content-center flex-wrap "
 
+          color="#1E1E1E"
+          height="83%"
+          width="85%"
+          outlined
+          tile
       >
-
-        <div class="text-center text--white align-center justify-center"  style="padding-top: 14%">
+        <v-container class="mx-auto text-center text--white" >
           <v-row>
-            <v-col xs="12" sm="12" md="4" lg="4" xl="4">
+            <v-col  xs="12" sm="12" md="4" lg="4" xl="4">
               <v-progress-circular
                 :rotate="-90"
                 :size=size
@@ -27,7 +31,7 @@
                 <v-col>
               <h1 class="text-center">{{ value }}%</h1>
                   <div class="pt-5">
-                <v-row>doświadczonych pracowników</v-row>
+                <v-row>doświadczonych <br> pracowników</v-row>
                   </div>
                 </v-col>
               </v-progress-circular>
@@ -39,12 +43,12 @@
                   :width="15"
                   :value="year"
                   :color=orange
-
+                  class="ml-lg-16"
               >
                 <v-col>
                   <h1 class="text-center">{{ year }}%</h1>
                   <div class="pt-5 mx-10" >
-                    <v-row>najnowszej technologi budownictwa</v-row>
+                    <v-row>najnowszej technologi </v-row>
                   </div>
                 </v-col>
               </v-progress-circular>
@@ -56,7 +60,7 @@
                   :width="15"
                   :value="project"
                   :color=orange
-
+                  class="ml-lg-16"
               >
                 <v-col>
                   <h1 class="text-center">{{ lat }} lat</h1>
@@ -67,7 +71,7 @@
               </v-progress-circular>
             </v-col>
           </v-row>
-        </div>
+        </v-container>
         <router-link @click.native="scrollToTop"  :to="{name:'kontakt'}" class="text-decoration-none">
         <div class="pt-11">
 
@@ -124,289 +128,59 @@
           W połączeniu z dokładnością praz oraz przykładaniem się do profesjonalnej
           i indywidualnej realizacji staliśmy się solidnym wykonawcą
         </v-card-subtitle>
-         <div class="videoWrapper" style="">
-            <iframe style="" src="https://www.youtube.com/embed/a0glBQXOcl4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <div class="videoWrapper mx-auto align-self-center py-10">
+           <iframe :height=height :width=width  src="https://www.youtube.com/embed/OxE7F14MLp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          </div>
       </div>
 
 
     </v-card>
-<div  id="usluga">
-    <v-card
-      class="text-center text-h1-xl py-10"
+    <div  id="usluga">
+     <v-card
+      class="text-center py-10"
       color="#0A0A0A"
       dark
-      height="100%"
+
     >
-      <v-row>
-        <v-col>
-      <v-card
-        class="mx-auto"
-        max-width="344"
-      >
-        <v-img
-            src="../assets/sprzet/spych.png"
-            height="200px"
-        ></v-img>
-
-        <v-card-title>
-          drogi gruntowe
-        </v-card-title>
-
-        <v-card-subtitle>
-          posiadamy najlepszy sprzęt do przygotowania oraz utrzymywania dróg gruntowych
-        </v-card-subtitle>
-
-
-
-        <v-card-actions>
-          <v-spacer></v-spacer>
-          <router-link @click.native="scrollToTop" :to="{name:'drogi-gruntowe'}" class="text-decoration-none">
-          <v-btn
-              :color=orange
-              outlined
-          >
-            Zobacz więcej
-          </v-btn>
-          </router-link>
-        </v-card-actions>
-      </v-card>
-        </v-col>
-        <v-col>
-      <v-card
-        class="mx-auto justify-left"
-        max-width="344"
-      >
-        <v-img
-            src="../assets/sprzet/koparka.png"
-            height="200px"
-        ></v-img>
-
-        <v-card-title>
-          Wykopy
-        </v-card-title>
-        <v-card-subtitle>
-          Posiadamy precyzyjny sprzęt do najbardziej wymagających wykopów.
-        </v-card-subtitle>
-
-        <v-card-actions>
-            <v-spacer></v-spacer>
-
-
-          <router-link @click.native="scrollToTop" :to="{name:'wykopy'}" class="text-decoration-none">
-            <v-btn
-                :color=orange
-                outlined
-            >
-             Zobacz więcej
-            </v-btn>
-          </router-link>
-        </v-card-actions>
-
-      </v-card>
-        </v-col>
-        <v-col>
-      <v-card
-          class="mx-auto justify-left"
-          max-width="344"
-
-      >
-        <v-img
-            src="../assets/sprzet/ciężarówka.png"
-            height="200px"
-        ></v-img>
-
-        <v-card-title>
-          Rozbiurki
-        </v-card-title>
-
-        <v-card-subtitle>
-          oferujemy transport oraz układanie kostki brukowej, kruszców
-        </v-card-subtitle>
-
-          <v-spacer></v-spacer>
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <router-link @click.native="scrollToTop" :to="{name:'rozbiorka'}" class="text-decoration-none">
-              <v-btn
-                  :color=orange
-                  outlined
-              >
-                Zobacz więcej
-              </v-btn>
-            </router-link>
-          </v-card-actions>
-      </v-card>
-        </v-col>
-        <v-col>
+       <v-row>
+        <div
+          v-for="(item, i) in uslugi"
+          :key="i"
+          class=" py-10 mx-auto"
+        >
           <v-card
-              class="mx-auto justify-left"
-              max-width="344"
-
+              max-width="380"
           >
+
             <v-img
-                src="../assets/sprzet/małySpych.png"
+                :src=item.src
                 height="200px"
             ></v-img>
 
             <v-card-title>
-              sprzęt
-            </v-card-title>
-
-            <v-card-subtitle>
-              Dokładność oraz szybkość działania, dzięki precyzyjnym urządzeniom
-            </v-card-subtitle>
-
-            <v-card-actions>
-              <v-spacer></v-spacer>
-
-              <router-link @click.native="scrollToTop" :to="{name:'urzadzenia'}" class="text-decoration-none">
-              <v-btn
-                  :color=orange
-                  outlined
-              >
-                Zobacz więcej
-              </v-btn>
-              </router-link>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-      </v-row>
-
-
-
-
-
-      <v-row style="padding-top: 5%">
-        <v-col>
-
-          <v-card
-              class="mx-auto"
-              max-width="344"
-          >
-            <v-img
-                src="../assets/sprzet/smallciezarowka.png"
-                height="200px"
-            ></v-img>
-
-            <v-card-title>
-              drogi gruntowe
+              {{ item.title }}
             </v-card-title>
             <v-card-subtitle>
-              posiadamy najlepszy sprzęt do przygotowania oraz utrzymywania dróg gruntowych
+              {{ item.subtite}}
             </v-card-subtitle>
 
 
 
             <v-card-actions>
               <v-spacer></v-spacer>
-              <router-link @click.native="scrollToTop" :to="{name:'kruszce'}" class="text-decoration-none">
+              <router-link @click.native="scrollToTop" :to="{name:item.more}" class="text-decoration-none">
                 <v-btn
                     :color=orange
                     outlined
-                >
-                 Zobacz więcej
+                >Zobacz więcej
                 </v-btn>
               </router-link>
             </v-card-actions>
           </v-card>
-
-        </v-col>
-        <v-col>
-          <v-card
-              class="mx-auto justify-left"
-              max-width="344"
-          >
-            <v-img
-                src="../assets/sprzet/koparka.png"
-                height="200px"
-            ></v-img>
-
-            <v-card-title>
-              Wykopy
-            </v-card-title>
-
-            <v-card-subtitle>
-              Posiadamy precyzyjny sprzęt do najbardziej wymagających wykopów.
-            </v-card-subtitle>
-
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn
-                  :color=orange
-                  outlined
-              >
-                Zobacz więcej
-              </v-btn>
-            </v-card-actions>
-
-          </v-card>
-        </v-col>
-        <v-col>
-          <v-card
-              class="mx-auto justify-left"
-              max-width="344"
-
-          >
-            <v-img
-                src="../assets/sprzet/ciężarówka.png"
-                height="200px"
-            ></v-img>
-
-            <v-card-title>
-              transport
-            </v-card-title>
-
-            <v-card-subtitle>
-              oferujemy transport oraz układanie kostki brukowej, kruszców
-            </v-card-subtitle>
-
-            <v-spacer></v-spacer>
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn
-                  :color=orange
-                  outlined
-              >
-                Zobacz więcej
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col>
-          <v-card
-              class="mx-auto justify-left"
-              max-width="344"
-
-          >
-            <v-img
-                src="../assets/sprzet/małySpych.png"
-                height="200px"
-            ></v-img>
-
-            <v-card-title>
-              sprzęt
-            </v-card-title>
-
-            <v-card-subtitle>
-              Dokładność oraz szybkość działania, dzięki precyzyjnym urządzeniom
-            </v-card-subtitle>
-
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn
-                  :color=orange
-                  outlined
-              >
-                Zobacz więcej
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-      </v-row>
-
+       </div>
+       </v-row>
     </v-card>
-  </div>
+    </div>
     <Footer></Footer>
   </v-cointeiner>
 </template>
@@ -418,11 +192,33 @@ export default {
   computed: {
     size () {
       switch (this.$vuetify.breakpoint.name) {
-        case 'xs': return 200
+        case 'xs': return 180
         case 'sm': return 200
-        case 'md': return 300
+        case 'md': return 250
         case 'lg': return 300
-        case 'xl': return 300
+        case 'xl': return 400
+        default:
+          return 344
+      }
+    },
+    height () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 157
+        case 'sm': return 315
+        case 'md': return 315
+        case 'lg': return 630
+        case 'xl': return 1060
+        default:
+          return 300
+      }
+    },
+    width () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 280
+        case 'sm': return  560
+        case 'md': return  560
+        case 'lg': return 1080
+        case 'xl': return 2160
         default:
           return 300
       }
@@ -445,94 +241,135 @@ export default {
       orange: "orange lighten-1",
       player: "",
       done: false,
+      uslugi:[
+        {
+          src: require("../assets/sprzet/spychbok.png"),
+          title:"drogi gruntowe",
+          subtite:" posiadamy najlepszy sprzęt do przygotowania oraz utrzymywania dróg gruntowych",
+          more:"drogi-gruntowe",
+        },
+        {
+          src: require("../assets/sprzet/koparka.png"),
+          title:"Wykopy",
+          subtite:" Posiadamy precyzyjny sprzęt do najbardziej wymagających wykopów.",
+          more:"wykopy",
+        },
+        {
+          src: require("../assets/sprzet/volvo.png"),
+          title:"Rozbiurki",
+          subtite:"oferujemy transport oraz układanie kostki brukowej, kruszców",
+          more:"rozbiorka",
+        },
+        {
+          src: require("../assets/sprzet/scania.png"),
+          title:"Sprzęt",
+          subtite:"Dokładność oraz szybkość działania, dzięki precyzyjnym urządzeniom\n",
+          more:"urzadzenia",
+        },
+        {
+          src: require("../assets/sprzet/smallciezarowka.png"),
+          title:"Chodniki oraz parkingi",
+          subtite:"Posiadamy wysoko zautomatyzoway mechanizm układania bruku\n",
+          more:"chodnikiParkingi",
+        },
+        {
+          src: require("../assets/sprzet/gosienica.png"),
+          title:"Kruszce",
+          subtite:"Posiadamy w naszej ofercie wielę kruszcy na sprzedaż.\n",
+          more:"kruszce",
+        },
+        {
+          src: require("../assets/sprzet/kopareczka.png"),
+          title:"Ogrodzenia",
+          subtite:"Budujemy ogrodzenia: murowane, metalowe, drewniane, kompozytowe, gabionowe\n",
+          more:"ogrodzenia",
+        },
+        {
+          src: require("../assets/sprzet/klamer.png"),
+          title:"Budynki użyteczności publicznej",
+          subtite:"Dokładność oraz jakość, dzięki precyzyjnym urządzeniom\n",
+          more:"budynki",
+        },
+          ],
       mobiles:[
         {
-          src: require("../assets/inwestycje/IMG_2966.jpg"),
+          mobile: require("../assets/inwestycjeMobile/1.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/2.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/3.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/4.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/5.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/6.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/7.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/8.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/9.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/10.jpg"),
+        },
+        {
+          mobile: require("../assets/inwestycjeMobile/11.jpg"),
+        },
 
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_0055-min.jpg"),
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_1336-min.jpg"),
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_3365-min.jpg"),
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_5833-min.jpg"),
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_5943-min.jpg"),
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_6187-min.jpg"),
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_6205-min.jpg"),
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
-        },
-        {
-          mobile: require("../assets/inwestycjeMobile/IMG_6456-min.jpg"),
-        },
       ],
       items: [
         {
-          src: require("../assets/inwestycje/IMG_2966.jpg"),
+          src: require("../assets/inwestycje/1.jpg"),
 
         },
         {
-          src: require("../assets/inwestycje/IMG_1249.jpg"),
+          src: require("../assets/inwestycje/2.jpg"),
         },
         {
-          src: require("../assets/inwestycje/IMG_5737.jpg"),
+          src: require("../assets/inwestycje/3.jpg"),
         },
         {
-          src: require("../assets/inwestycje/IMG_5942.jpg"),
+          src: require("../assets/inwestycje/4.jpg"),
         },
         {
-          src: require("../assets/inwestycje/IMG_6158.jpg"),
+          src: require("../assets/inwestycje/5.jpg"),
         },
         {
-          src: require("../assets/inwestycje/IMG_6162.jpg"),
+          src: require("../assets/inwestycje/6.jpg"),
         },
         {
-          src: require("../assets/inwestycje/IMG_6273.jpg"),
+          src: require("../assets/inwestycje/7.jpg"),
         },
         {
-          src: require("../assets/inwestycje/IMG_6488.jpg"),
+          src: require("../assets/inwestycje/8.jpg"),
         },
         {
-          src: require("../assets/inwestycje/IMG_6633.jpg"),
+          src: require("../assets/inwestycje/9.jpg"),
         },
         {
-          src: require("../assets/inwestycje/IMG_6634.jpg"),
+          src: require("../assets/inwestycje/10.jpg"),
         },
         {
-          src: require("../assets/inwestycje/IMG_6672.jpg"),
+          src: require("../assets/inwestycje/11.jpg"),
         },
         {
-          src: require("../assets/inwestycje/IMG_6673.jpg"),
+          src: require("../assets/inwestycje/12.jpg"),
         },
         {
-          src: require("../assets/inwestycje/IMG_7316.jpg"),
+          src: require("../assets/inwestycje/13.jpg"),
         },
         {
-          src: require("../assets/inwestycje/IMG_7319.jpg"),
+          src: require("../assets/inwestycje/14.jpg"),
         },
       ]
     };
@@ -578,34 +415,5 @@ export default {
 }
 </script>
 <style scoped>
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
 
-
-}
-/*@media only screen and (max-width: 600px) {*/
-
-/*  .videoWrapper {*/
-/*    text-align:center;*/
-/*  }*/
-
-/*  iframe {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*  }*/
-/*}*/
-
-.videoWrapper {
-  text-align:center;
-
-}
-
-iframe {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-}
 </style>

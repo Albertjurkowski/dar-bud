@@ -55,23 +55,17 @@ export default {
           items: [
 
             {
-              src: require("../assets/drogi/b.jpg"),
+              src: require("../assets/drogi/1.jpg"),
             },
             {
-              src: require("../assets/drogi/20200523_114018.jpg"),
+              src: require("../assets/drogi/2.jpg"),
             },
             {
-              src: require("../assets/drogi/c.jpg"),
+              src: require("../assets/drogi/3.jpg"),
             },
             {
-              src: require("../assets/drogi/20200629_144834.jpg"),
+              src: require("../assets/drogi/4.jpg"),
             },
-            {
-              src: require("../assets/drogi/IMG_20180818_114431.jpg"),
-            },
-            {
-              src: require("../assets/drogi/VID_20200820_125156_exported_22613_1597948953933.jpg"),
-            }
           ]
         };
       }
