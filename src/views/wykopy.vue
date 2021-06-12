@@ -28,7 +28,7 @@
           </v-row>
 
           <v-row align="center" class="mx-auto justify-center pt-16">
-            <v-card height="562.5" width="750"><img src="../assets/fundamenty/lawyfundamentalne.jpg" alt="ławy fundamentalne" width="100%" height="100%"></v-card>
+            <v-card height="562.5" width="750"><img src="../assets/fundamenty/3.jpg" alt="ławy fundamentalne" width="100%" height="100%"></v-card>
             <v-card height="562.5" width="750" color="theme--dark">
               <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
                 <strong> Ławy fundamentowe</strong>
@@ -64,14 +64,10 @@
                         show-arrows-on-hover
                     >
                       <v-carousel-item
-
+                          v-for="(item,i) in kanalizacje"
+                          :key="i"
+                          :src="item.src"
                       >
-
-                        <v-img
-                            v-for="(item,i) in items"
-                            :key="i"
-                            :src="item.src"
-                        ></v-img>
 
                       </v-carousel-item>
                     </v-carousel>
@@ -160,7 +156,7 @@ export default {
         subtitle: "Polecane są na przykład wówczas, gdy działka znajduje się na gruntach niezbyt spoistych",
         description: "Bądź wtedy, gdy dom ma być w całości lub częściowo podpiwniczony. Skarpy takiego dużego wykopu powinny być nachylone pod kątem 35-40°. Dno wykopu powinno się znaleźć poniżej poziomu przemarzania gruntu. W zależności od tego, w której strefie przemarzania gruntu znajduje się dana działka, poziom ten wynosi od 0,8 do 1,4 m. Deskowanie ław będziemy robić na wyrównanym dnie wykopu szerokoprzestrzennego.",
         show:"true",
-        src: "../assets/rozbiurki/"
+        src: require("../assets/fundamenty/2.jpg"),
   },
         {
         title:"Ławy fundamentowe",
@@ -193,10 +189,10 @@ export default {
           src: "../assets/"
         },
       ],
-      items: [
+      kanalizacje: [
 
         {
-          src: "../assets/kanalizacje/1.jpg",
+          src: require("../assets/kanalizacje/1.jpg"),
           mobile: "../assets/inwestycjeMobile/1.jpg",
         },
         {

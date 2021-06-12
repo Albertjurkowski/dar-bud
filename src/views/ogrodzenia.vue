@@ -57,16 +57,7 @@ export default {
       items: [
 
         {
-          src: require("../assets/drogi/1.jpg"),
-        },
-        {
-          src: require("../assets/drogi/2.jpg"),
-        },
-        {
-          src: require("../assets/drogi/3.jpg"),
-        },
-        {
-          src: require("../assets/drogi/4.jpg"),
+          src: require("../assets/ogrodzenia/1.jpg"),
         },
       ]
     };

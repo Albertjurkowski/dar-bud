@@ -330,7 +330,6 @@ export default {
       items: [
         {
           src: require("../assets/inwestycje/1.jpg"),
-
         },
         {
           src: require("../assets/inwestycje/2.jpg"),
@@ -370,6 +369,8 @@ export default {
         },
         {
           src: require("../assets/inwestycje/14.jpg"),
+        },{
+          src: require("../assets/inwestycje/15.jpg"),
         },
       ]
     };

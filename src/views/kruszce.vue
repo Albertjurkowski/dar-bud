@@ -2,11 +2,12 @@
   <v-cointeiner>
   <Nav></Nav>
     <v-card
-        class="pt-10"
-        height="95%"
-        color="#0A0A0A"
-        width="100%"
+  class="pt-10"
     >
+      <v-img
+          src="../assets/kruszce/pixkamyczki.jpg"
+          :height=heightback
+      >
     <v-row class="pt-16 mx-auto">
       <v-col xs="12" sm="12" md="12" lg="6" xl="6">
         <v-card :width="height" class=" mx-auto justify-center" >
@@ -60,6 +61,7 @@
         </v-card>
       </v-col>
     </v-row>
+      </v-img>
     </v-card>
     <Footer></Footer>
   </v-cointeiner>
@@ -85,6 +87,16 @@ export default {
         default: return 344
       }
     },
+    heightback () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 1500
+        case 'sm': return 1480
+        case 'md': return 1450
+        case 'lg': return 800
+        case 'xl': return 840
+        default: return 1920
+      }
+    }
   },
   data() {
     return {

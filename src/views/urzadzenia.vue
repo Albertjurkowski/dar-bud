@@ -32,11 +32,12 @@
             :width="height"
         >
           <v-img
+            :height=car
             :src="item.src"
           ></v-img>
             <v-card-text
               class="pt-6"
-              style="position: relative;"
+              style="position: relative"
             >
               <v-card-title class="orange--text text--lighten-1">
                 {{ item.title }}
@@ -93,6 +94,16 @@ export default {
         case 'lg': return 570
         case 'xl': return 800
         default: return 344
+      }
+    },
+    car () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 200
+        case 'sm': return 200
+        case 'md': return 250
+        case 'lg': return 300
+        case 'xl': return 400
+        default: return 200
       }
     },
   },

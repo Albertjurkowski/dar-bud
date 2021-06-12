@@ -55,18 +55,11 @@ export default {
 
       orange: "orange lighten-1",
       items: [
-
         {
-          src: require("../assets/drogi/1.jpg"),
+          src: require("../assets/fundamenty/3.jpg"),
         },
         {
-          src: require("../assets/drogi/2.jpg"),
-        },
-        {
-          src: require("../assets/drogi/3.jpg"),
-        },
-        {
-          src: require("../assets/drogi/4.jpg"),
+          src: require("../assets/fundamenty/1.jpg"),
         },
       ]
     };

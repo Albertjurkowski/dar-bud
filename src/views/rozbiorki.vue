@@ -84,7 +84,7 @@
               Nasze wykopy są wykonywane dzięki sprzętu o zawansowaniej technologi
             </v-card-text>
           </v-card>
-          <v-card height="562.5" width="750"><img src="../assets/rozbiurki/5.jpg" alt="rozbiurka" width="100%" height="100%"></v-card>
+          <v-card height="562.5" width="750"><img src="../assets/kanalizacje/4.jpg" alt="rozbiurka" width="100%" height="100%"></v-card>
         </v-row>
       </div>
       <div class="pt-10"></div>
@@ -144,7 +144,7 @@
           max-width="344"
           color="theme--dark"
       >
-      <v-img src="">
+      <v-img src="../assets/kanalizacje/4.jpg">
       </v-img>
 
         <v-card-title class="orange--text text--lighten-1">

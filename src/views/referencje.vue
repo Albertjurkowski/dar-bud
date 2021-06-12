@@ -29,7 +29,7 @@
         </v-row>
 
         <v-row align="center" class="mx-auto justify-center pt-16">
-          <v-card height="562.5" width="750"><img src="../assets/fundamenty/lawyfundamentalne.jpg" alt="ławy fundamentalne" width="100%" height="100%"></v-card>
+          <v-card height="562.5" width="750"><img src="../assets/fundamenty/3.jpg" alt="ławy fundamentalne" width="100%" height="100%"></v-card>
           <v-card height="562.5" width="750" color="theme--dark">
             <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
               <strong> BURMISTRZ MIASTA MILENIÓWEK </strong>
