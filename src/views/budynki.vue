@@ -7,11 +7,9 @@
         dark
         height="100%"
     >
-      <h1 class=" pt-16 orange--text text--lighten-1">
-        <strong>Budowa Budynków użyteczności publicznej</strong>
-      </h1>
-      <v-card-text class="text-md-body-1 white--text" >
-        Niezależnie od zastosowanego materiału nasze ogrodzenia prezentują najwyższa jakość.
+      <v-card-text class="d-flex justify-center text-h2  orange--text text--lighten-1">Budynki użyteczności publicznej</v-card-text>
+      <v-card-text class="d-flex justify-center text-h6 pt-10 white--text" >
+       Oferujemy budowę budynków użyteczności publicznej.
       </v-card-text>
       <v-row align="center" class="mx-auto justify-center">
         <v-card width="750" class="pt-10" color="#0A0A0A">

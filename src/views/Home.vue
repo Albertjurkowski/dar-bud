@@ -117,11 +117,11 @@
         id="nas"
     >
       <div class="text-#0A0A0A black--text pt-5">
-        <h1 style="font-size: 90px">
-          <strong>O NAS</strong>
-        </h1>
+        <p class="text-h1">
+          O nas
+        </p>
         <v-card-subtitle class="text-md-h5" >
-          Firma Dar -Bud Dariusz Bednarczyk działa na rynku od 2006.
+          Firma Dar-Bud Dariusz Bednarczyk działa na rynku od 2006.
           Od samego początku stawialiśmy zarówno na sprawdzone rozwiązania, jak i nowe,
           skuteczne rozwiązania technologiczne. Specjalistyczny sprzęt, wykwalifikowana kadra, a
           także doświadczenie w realizacji inwestycji.
@@ -129,7 +129,7 @@
           i indywidualnej realizacji staliśmy się solidnym wykonawcą
         </v-card-subtitle>
          <div class="videoWrapper mx-auto align-self-center py-10">
-           <iframe :height=height :width=width  src="https://www.youtube.com/embed/OxE7F14MLp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           <iframe :height=height :width=width  src="https://www.youtube.com/embed/OxE7F14MLp4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          </div>
       </div>
 
@@ -275,7 +275,7 @@ export default {
         {
           src: require("../assets/sprzet/gosienica.png"),
           title:"Kruszce",
-          subtite:"Posiadamy w naszej ofercie wielę kruszcy na sprzedaż.\n",
+          subtite:"Posiadamy w naszej ofercie wiele rodzaji kruszcy na sprzedaż.\n",
           more:"kruszce",
         },
         {

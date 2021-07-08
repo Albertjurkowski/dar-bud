@@ -5,7 +5,7 @@
   class="pt-10"
     >
       <v-img
-          src="../assets/kruszce/pixkamyczki.jpg"
+          src="../assets/kruszce/3.jpg"
           :height=heightback
       >
     <v-row class="pt-16 mx-auto">

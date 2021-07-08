@@ -101,7 +101,7 @@
         >
           <v-list-item>
             <v-btn
-                href="/#referencje"
+                href="/referencje"
                 text
                 color="grey lighten-3"
             >

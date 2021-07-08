@@ -11,6 +11,7 @@ import referencje from "../views/referencje";
 import ogrodzenia from "../views/ogrodzenia";
 import chodnikiParkingi from "../views/chodnikiParkingi"
 import budynki from "../views/budynki";
+import luksusowe from "../views/luksusowe";
 Vue.use(VueRouter)
 
 const routes = [
@@ -69,6 +70,11 @@ const routes = [
     path: '/budynki',
     name: 'budynki',
     component: budynki
+  },
+  {
+    path: '/samochod',
+    name: 'luksusowe',
+    component: luksusowe
   },
   {
     path: '/about',

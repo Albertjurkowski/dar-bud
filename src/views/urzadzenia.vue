@@ -8,21 +8,19 @@
       width="100%"
     >
       <div  class="text-center py-10">
-        <h1 style="font-size: 70px" class="orange--text text--lighten-1">
-          <strong>Sprzęt</strong>
-        </h1>
-        <v-card-text class="headline pt-10 white--text" >
-        Nasze usługi są wykonywane przez wykwalifikowanych pracowników oraz nowoczesne technologie.
+        <v-card-text class="d-flex justify-center text-h2  orange--text text--lighten-1">Sprzęt</v-card-text>
+        <v-card-text class="d-flex justify-center text-h6 pt-10 white--text" >
+          Nasze usługi są wykonywane przez wykwalifikowanych pracowników oraz nowoczesne technologie.
         </v-card-text>
       </div>
       <v-row>
       <div
         v-for="(item, i) in items"
         :key="i"
-        class="py-4"
+        class="py-4 mx-auto"
       >
         <v-card
-            class="text-h1-xl ml-8"
+            class="text-h1-xl"
             justify="center"
             color="#0A0A0A"
             dark

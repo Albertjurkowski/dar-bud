@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="all">
     <router-view :key="$route.fullPath"/>
   </v-app>
 </template>
@@ -11,7 +11,6 @@ export default {
 };
 </script>
 <style>
-*{
-  font-family: 'IBM Plex Sans', sans-serif;
-}
+@import '/src/assets/css/main.css';
+
 </style>

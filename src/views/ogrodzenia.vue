@@ -7,12 +7,12 @@
         dark
         height="100%"
     >
-      <h1 class=" pt-16 orange--text text--lighten-1">
-        <strong>Budowa ogrodzeń</strong>
-      </h1>
-      <v-card-text class="text-md-body-1 white--text" >
-        Niezależnie od zastosowanego materiału nasze ogrodzenia prezentują najwyższa jakość.
-      </v-card-text>
+      <div class="pt-16 mx-auto justify-center">
+        <v-card-title class="d-flex justify-center text-h2  orange--text text--lighten-1">Budowa ogrodzeń</v-card-title>
+        <v-card-text class="d-flex justify-center text-h6 pt-10 white--text" >
+          Niezależnie od zastosowanego materiału nasze ogrodzenia prezentują najwyższa jakość.
+        </v-card-text>
+      </div>
       <v-row align="center" class="mx-auto justify-center">
         <v-card width="750" class="pt-10" color="#0A0A0A">
           <v-carousel
