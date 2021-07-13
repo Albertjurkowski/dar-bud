@@ -43,6 +43,7 @@
 
               <v-card-subtitle class="white--text">
                 {{item.subtitle }}
+`                {{item.subtitle }}
               </v-card-subtitle>
               <v-card-actions>
                 <v-spacer></v-spacer>
@@ -51,7 +52,7 @@
                     color="white"
                     @click="item.show = !item.show"
                 >
-                  <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                  <v-icon>{{ item.show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                 </v-btn>
               </v-card-actions>
               <v-expand-transition>

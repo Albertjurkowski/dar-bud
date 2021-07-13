@@ -6,23 +6,19 @@
         color="#0A0A0A"
     >
       <div style="padding-top: 8%" class="text-center">
-        <h1 style="font-size: 70px" class="orange--text text--lighten-1">
-          <strong>Rozbiórki</strong>
-        </h1>
-        <v-card-text class="headline pt-10 white--text" >
+        <v-card-text class="d-flex justify-center text-h2  orange--text text--lighten-1">Rozbiórki</v-card-text>
+        <v-card-text class="d-flex justify-center text-h6 pt-10 white--text" >
           Nasze rozbiórki są przeprowadzane rzetelnie w kontrolowany sposób
+
         </v-card-text>
       </div>
 
       <div class="hidden-md-and-down">
         <v-row align="center" class="mx-auto justify-center pt-16">
           <v-card height="562.5" width="750" color="theme--dark">
-            <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
-              <strong> Wyburzenia budynków gospodarczych, mieszkalnych i
-                Przemysłowych</strong>
-            </h1>
-
-            <v-card-text class="headline pt-10 white--text" >
+            <v-card-text class="d-flex justify-center text-h3  orange--text text--lighten-1">Wyburzenia budynków gospodarczych, mieszkalnych i
+              Przemysłowych</v-card-text>
+            <v-card-text class="text-h6 pt-10 white--text" >
               PRZYGOTOWANIE TERENU POD BUDOWĘ
             </v-card-text>
           </v-card>
@@ -64,25 +60,23 @@
             </v-carousel>
           </v-card>
           <v-card height="562.5" width="750" color="theme--dark">
-            <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
-              <strong> Wycinka drzew, karczowanie, wyrywanie i wywóz karp</strong>
-            </h1>
 
-            <v-card-text class="headline pt-10 white--text" >
+
+            <v-card-text class="d-flex justify-center text-h3  orange--text text--lighten-1">Wycinka drzew, karczowanie, wyrywanie i wywóz karp</v-card-text>
+            <v-card-text class="text-h6 pt-10 white--text" >
               Niwelacja, podnoszenie i kształtowanie terenu, skarpowanie
             </v-card-text>
+
           </v-card>
         </v-row>
 
         <v-row align="center" class="mx-auto justify-center pt-16">
           <v-card height="562.5" width="750" color="theme--dark">
-            <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
-              <strong> Osuszanie terenu</strong>
-            </h1>
-
-            <v-card-text class="headline pt-10 white--text" >
+             <v-card-text class="d-flex justify-center text-h3  orange--text text--lighten-1">Osuszanie terenu</v-card-text>
+            <v-card-text class="text-h6 pt-10 white--text" >
               Nasze wykopy są wykonywane dzięki sprzętu o zawansowaniej technologi
             </v-card-text>
+
           </v-card>
           <v-card height="562.5" width="750"><img src="../assets/kanalizacje/4.jpg" alt="rozbiurka" width="100%" height="100%"></v-card>
         </v-row>

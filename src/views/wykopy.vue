@@ -2,25 +2,27 @@
   <v-cointeiner>
     <Nav></Nav>
       <v-card
-        height="100%"
+        max-height="100%"
         color="#0A0A0A"
       >
         <div class="pt-16 text-center">
-          <h1 style="font-size: 70px" class="orange--text text--lighten-1">
-            <strong>Wykopy</strong>
-          </h1>
-          <v-card-text class="headline pt-10 white--text" >
-           Nasze wykopy są wykonywane dzięki sprzętu o zawansowaniej technologi
+          <v-card-text class="d-flex justify-center text-h2  orange--text text--lighten-1">Wykopy</v-card-text>
+          <v-card-text class="d-flex justify-center text-h6 pt-10 white--text" >
+            Nasze wykopy są wykonywane dzięki sprzętu o zawansowaniej technologi
           </v-card-text>
         </div>
         <div class="hidden-md-and-down">
           <v-row align="center" class="mx-auto justify-center pt-16">
           <v-card height="562.5" width="750" color="theme--dark">
             <h1 style=" font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
-              <strong> Szerokoprzestrzenne</strong>
+              <strong> </strong>
             </h1>
 
             <v-card-text class="headline pt-10 white--text" >
+            </v-card-text>
+
+            <v-card-text class="d-flex justify-center text-h3  orange--text text--lighten-1">Szerokoprzestrzenne</v-card-text>
+            <v-card-text class="text-h6 pt-10 white--text" >
               Polecane są na przykład wówczas, gdy działka znajduje się na gruntach niezbyt spoistych, bądź wtedy, gdy dom ma być w całości lub częściowo podpiwniczony. Skarpy takiego dużego wykopu powinny być nachylone pod kątem 35-40°. Dno wykopu powinno się znaleźć poniżej poziomu przemarzania gruntu. W zależności od tego, w której strefie przemarzania gruntu znajduje się dana działka, poziom ten wynosi od 0,8 do 1,4 m. Deskowanie ław będziemy robić na wyrównanym dnie wykopu szerokoprzestrzennego.
             </v-card-text>
           </v-card>
@@ -31,10 +33,13 @@
             <v-card height="562.5" width="750"><img src="../assets/fundamenty/3.jpg" alt="ławy fundamentalne" width="100%" height="100%"></v-card>
             <v-card height="562.5" width="750" color="theme--dark">
               <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
-                <strong> Ławy fundamentowe</strong>
+                <strong> </strong>
               </h1>
 
               <v-card-text class="headline pt-10 white--text" >
+              </v-card-text>
+              <v-card-text class="d-flex justify-center text-h3  orange--text text--lighten-1">Ławy fundamentowe</v-card-text>
+              <v-card-text class="text-h6 pt-10 white--text" >
                 Podstawą solidnego, dobrze wykonanego domu są fundamenty. Wykonać je można za pomocą ław fundamentowych. Te zapewnią dużą wytrzymałość całej konstrukcji domu oraz są w stanie przenieść ciężar budynku ze ścian fundamentowych na grunt.
               </v-card-text>
             </v-card>
@@ -43,10 +48,13 @@
           <v-row align="center" class="mx-auto justify-center pt-16">
             <v-card height="562.5" width="750" color="theme--dark">
               <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
-                <strong> Szamba</strong>
+                <strong> </strong>
               </h1>
 
               <v-card-text class="headline pt-10 white--text" >
+              </v-card-text>
+              <v-card-text class="d-flex justify-center text-h3  orange--text text--lighten-1">Szamba</v-card-text>
+              <v-card-text class="text-h6 pt-10 white--text" >
                 Podziemny zbiornik, zazwyczaj bezodpływowy, wykonany np. z betonu, do którego odprowadzane są ścieki z domowych urządzeń kanalizacyjnych.
               </v-card-text>
             </v-card>
@@ -74,10 +82,14 @@
                   </v-card>
                   <v-card height="562.5" width="750" color="theme--dark">
                     <h1 style="font-size: 50px" class="orange--text text--lighten-1 pt-9 text-center">
-                      <strong> Gaz, woda, kanalizacja</strong>
+                      <strong></strong>
                     </h1>
 
                     <v-card-text class="headline pt-10 white--text" >
+
+                    </v-card-text>
+                    <v-card-text class="d-flex justify-center text-h3  orange--text text--lighten-1"> Gaz, woda, kanalizacja</v-card-text>
+                    <v-card-text class="text-h6 pt-10 white--text" >
                       Nasze wykopy są wykonywane dzięki sprzętu o zawansowaniej technologi
                     </v-card-text>
                   </v-card>
@@ -86,14 +98,12 @@
         <div
           v-for="(item, index) in wykopy"
          :key="index"
-          class="pt-10
-
-"
+          class="pt-10"
         >
           <v-card
-
               class="mx-auto hidden-lg-and-up "
               max-width="344"
+              max-height="100%"
               color="theme--dark"
 
           >

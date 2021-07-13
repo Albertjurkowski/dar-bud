@@ -1,18 +1,17 @@
 <template>
 <v-conteiner>
   <Nav></Nav>
+  <v-card color="orange lighten-1">
   <v-row>
-    <v-col xs="12" sm="12"  md="6"  lg="6" xl="6" >
+    <v-col xs="6" sm="6"  md="6"  lg="6" xl="6">
       <v-card
-        height="100%"
+        height="900"
+        width="100%"
         color="#0A0A0A"
-        class="text-center justify-center"
+        class="text-center d-flex align-content-center flex-wrap"
       >
-          <div style="padding-top: 35%">
-            <h1 style="font-size: 60px">
-              <strong class=" orange--text text--lighten-1">Kontakt</strong>
-            </h1>
-            <v-card-text class="headline white--text">
+        <v-card-text class="d-flex justify-center text-h2 orange--text text--lighten-1">Kontakt</v-card-text>
+        <v-card-text class="headline white--text">
               <v-icon
                 x-large
                 :color=orange
@@ -30,12 +29,13 @@
               </v-icon>
               <a type="mail"  class="text-decoration-none white--text"> dariusz@darbud.pl </a>
             </v-card-text>
-          </div>
         </v-card>
     </v-col>
-    <v-col xs="12" sm="12"  md="6"  lg="6" xl="6" >
+    <v-col xs="6" sm="6"  md="6"  lg="6" xl="6" >
     <v-card
+        min-width="300"
         height="900"
+        width="100%"
     >
       <GmapMap
           :center="{lat:52.028604, lng: 20.677303}"
@@ -47,6 +47,7 @@
     </v-card>
     </v-col>
   </v-row>
+  </v-card>
   <Footer></Footer>
 </v-conteiner>
 </template>

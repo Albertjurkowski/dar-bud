@@ -79,14 +79,14 @@
         </router-link>
       </v-card>
     </v-card>
+    <div id="inwestycje">
       <v-carousel
         class="hidden-sm-and-down"
         hide-delimiters
         height="1000"
-        max-widith="100%"
+        widith="100%"
         hide-delimiter-background
         show-arrows-on-hover
-        id="inwestycje"
       >
         <v-carousel-item
             v-for="(item,i) in items"
@@ -96,10 +96,11 @@
 
         </v-carousel-item>
       </v-carousel>
+    </div>
     <v-carousel
         cycle
         hide-delimiters
-        max-widith="100%"
+        width="100%"
         hide-delimiter-background
         show-arrows-on-hover
         class="hidden-md-and-up"
@@ -115,6 +116,7 @@
         class=" text-h1-xl text-center pt-8"
         :color=orange
         id="nas"
+        width="100%"
     >
       <div class="text-#0A0A0A black--text pt-5">
         <p class="text-h1">
@@ -129,18 +131,18 @@
           i indywidualnej realizacji staliśmy się solidnym wykonawcą
         </v-card-subtitle>
          <div class="videoWrapper mx-auto align-self-center py-10">
-           <iframe :height=height :width=width  src="https://www.youtube.com/embed/OxE7F14MLp4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+           <iframe :height=height :width=width  src="https://www.youtube.com/embed/OxE7F14MLp4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; async; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          </div>
       </div>
 
 
     </v-card>
-    <div  id="usluga">
+    <div id="uslugi">
      <v-card
       class="text-center py-10"
       color="#0A0A0A"
       dark
-
+      width="100%"
     >
        <v-row>
         <div
@@ -244,8 +246,8 @@ export default {
       uslugi:[
         {
           src: require("../assets/sprzet/spychbok.png"),
-          title:"drogi gruntowe",
-          subtite:" posiadamy najlepszy sprzęt do przygotowania oraz utrzymywania dróg gruntowych",
+          title:"Drogi gruntowe",
+          subtite:" Posiadamy najlepszy sprzęt do przygotowania oraz utrzymywania dróg gruntowych.",
           more:"drogi-gruntowe",
         },
         {
@@ -256,20 +258,20 @@ export default {
         },
         {
           src: require("../assets/sprzet/volvo.png"),
-          title:"Rozbiurki",
-          subtite:"oferujemy transport oraz układanie kostki brukowej, kruszców",
+          title:"Rozbiórki",
+          subtite:"Oferujemy transport oraz układanie kostki brukowej, kruszców.",
           more:"rozbiorka",
         },
         {
           src: require("../assets/sprzet/scania.png"),
           title:"Sprzęt",
-          subtite:"Dokładność oraz szybkość działania, dzięki precyzyjnym urządzeniom\n",
+          subtite:"Dokładność oraz szybkość działania, dzięki precyzyjnym urządzeniom.\n",
           more:"urzadzenia",
         },
         {
           src: require("../assets/sprzet/smallciezarowka.png"),
           title:"Chodniki oraz parkingi",
-          subtite:"Posiadamy wysoko zautomatyzoway mechanizm układania bruku\n",
+          subtite:"Posiadamy wysoko zautomatyzoway mechanizm układania bruku.\n",
           more:"chodnikiParkingi",
         },
         {
@@ -281,13 +283,13 @@ export default {
         {
           src: require("../assets/sprzet/kopareczka.png"),
           title:"Ogrodzenia",
-          subtite:"Budujemy ogrodzenia: murowane, metalowe, drewniane, kompozytowe, gabionowe\n",
+          subtite:"Budujemy ogrodzenia: murowane, metalowe, drewniane, kompozytowe, gabionowe.\n",
           more:"ogrodzenia",
         },
         {
           src: require("../assets/sprzet/klamer.png"),
           title:"Budynki użyteczności publicznej",
-          subtite:"Dokładność oraz jakość, dzięki precyzyjnym urządzeniom\n",
+          subtite:"Dokładność oraz jakość, dzięki precyzyjnym urządzeniom.\n",
           more:"budynki",
         },
           ],
